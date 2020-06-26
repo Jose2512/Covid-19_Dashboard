@@ -1,0 +1,28 @@
+#mainLinechart{
+    height:400px;
+    width: 100%;
+
+}
+
+#charMW{
+    height:400px;
+    width: 100%;
+}
+
+#charMW_dec{
+    height:400px;
+    width: 100%;
+}
+
+#heatmaphosp{
+    height:600px;
+    width: 100%;
+}
+.manualcard{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.toppadding{
+    padding-top: 20px;
+}
