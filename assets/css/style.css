@@ -6,13 +6,16 @@
 }
 
 #charMW{
-    height:400px;
+    height:450px;
     width: 100%;
+    padding: 10px 10px 10px 10px;
+
 }
 
 #charMW_dec{
-    height:400px;
+    height:450px;
     width: 100%;
+    padding: 10px 10px 10px 10px;
 }
 
 #heatmaphosp{
@@ -28,6 +31,11 @@
     padding-top: 20px;
 }
 
+.svg_pop{
+    align-self: center;
+    margin: auto;
+    display: block;
+}
 
 /* -----DISEASES STUFF----- */
 #Bubblechart{
