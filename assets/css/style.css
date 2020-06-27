@@ -1,3 +1,4 @@
+/* ---- MAIN STUFF ---- */
 #mainLinechart{
     height:450px;
     width: 100%;
@@ -26,3 +27,24 @@
 .toppadding{
     padding-top: 20px;
 }
+
+
+/* -----DISEASES STUFF----- */
+#Bubblechart{
+
+}
+
+#Bubblechart-Table{
+
+}
+
+
+#Bubble-BarChart{
+
+}
+
+#Bubble-PieChart{
+
+}
+
+/* OTHER STUFF */
