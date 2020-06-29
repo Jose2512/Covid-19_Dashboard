@@ -1,0 +1,1642 @@
+date,name,value
+2020-01-29,Iztacalco,1
+2020-02-07,Benito Juarez,1
+2020-02-12,Cuajimalpa de Morelos,1
+2020-02-27,Gustavo A. Madero,1
+2020-02-27,Iztapalapa,1
+2020-02-27,Miguel Hidalgo,1
+2020-03-02,Coyoacan,1
+2020-03-05,Alvaro Obregon,1
+2020-03-07,Miguel Hidalgo,1
+2020-03-08,Coyoacan,1
+2020-03-08,Miguel Hidalgo,1
+2020-03-09,Coyoacan,1
+2020-03-10,Benito Juarez,2
+2020-03-10,Cuajimalpa de Morelos,1
+2020-03-10,Tlalpan,2
+2020-03-11,Azcapotzalco,1
+2020-03-11,Benito Juarez,3
+2020-03-11,Cuajimalpa de Morelos,2
+2020-03-11,Cuauhtemoc,1
+2020-03-11,Gustavo A. Madero,1
+2020-03-11,Iztapalapa,1
+2020-03-11,La Magdalena Contreras,2
+2020-03-11,Miguel Hidalgo,4
+2020-03-11,Tlalpan,1
+2020-03-11,Alvaro Obregon,1
+2020-03-12,Coyoacan,2
+2020-03-12,Cuajimalpa de Morelos,5
+2020-03-12,Gustavo A. Madero,1
+2020-03-12,Iztacalco,1
+2020-03-12,Miguel Hidalgo,9
+2020-03-12,Tlalpan,1
+2020-03-12,Alvaro Obregon,1
+2020-03-13,Benito Juarez,3
+2020-03-13,Cuajimalpa de Morelos,3
+2020-03-13,Cuauhtemoc,1
+2020-03-13,Gustavo A. Madero,1
+2020-03-13,La Magdalena Contreras,1
+2020-03-13,Miguel Hidalgo,9
+2020-03-13,Tlalpan,3
+2020-03-13,Venustiano Carranza,1
+2020-03-13,Xochimilco,2
+2020-03-13,Alvaro Obregon,5
+2020-03-14,Azcapotzalco,1
+2020-03-14,Benito Juarez,2
+2020-03-14,Cuajimalpa de Morelos,7
+2020-03-14,Gustavo A. Madero,5
+2020-03-14,Iztacalco,1
+2020-03-14,Iztapalapa,1
+2020-03-14,La Magdalena Contreras,1
+2020-03-14,Miguel Hidalgo,6
+2020-03-14,Tlalpan,2
+2020-03-14,Alvaro Obregon,4
+2020-03-15,Benito Juarez,1
+2020-03-15,Coyoacan,1
+2020-03-15,Cuajimalpa de Morelos,2
+2020-03-15,Gustavo A. Madero,1
+2020-03-15,Miguel Hidalgo,5
+2020-03-15,Tlalpan,1
+2020-03-15,Venustiano Carranza,1
+2020-03-16,Azcapotzalco,2
+2020-03-16,Benito Juarez,1
+2020-03-16,Coyoacan,1
+2020-03-16,Cuajimalpa de Morelos,3
+2020-03-16,Gustavo A. Madero,3
+2020-03-16,Miguel Hidalgo,12
+2020-03-16,Tlalpan,1
+2020-03-16,Venustiano Carranza,1
+2020-03-16,Xochimilco,1
+2020-03-16,Alvaro Obregon,8
+2020-03-17,Azcapotzalco,1
+2020-03-17,Benito Juarez,4
+2020-03-17,Coyoacan,1
+2020-03-17,Cuajimalpa de Morelos,14
+2020-03-17,Cuauhtemoc,3
+2020-03-17,Gustavo A. Madero,3
+2020-03-17,Iztacalco,2
+2020-03-17,Iztapalapa,2
+2020-03-17,La Magdalena Contreras,4
+2020-03-17,Miguel Hidalgo,8
+2020-03-17,Tlalpan,2
+2020-03-17,Tlahuac,1
+2020-03-17,Xochimilco,1
+2020-03-17,Alvaro Obregon,2
+2020-03-18,Azcapotzalco,4
+2020-03-18,Benito Juarez,2
+2020-03-18,Coyoacan,1
+2020-03-18,Cuajimalpa de Morelos,7
+2020-03-18,Cuauhtemoc,3
+2020-03-18,Gustavo A. Madero,4
+2020-03-18,Iztacalco,1
+2020-03-18,Iztapalapa,3
+2020-03-18,La Magdalena Contreras,2
+2020-03-18,Miguel Hidalgo,12
+2020-03-18,Tlahuac,2
+2020-03-18,Venustiano Carranza,1
+2020-03-18,Alvaro Obregon,5
+2020-03-19,Azcapotzalco,2
+2020-03-19,Benito Juarez,2
+2020-03-19,Coyoacan,3
+2020-03-19,Cuajimalpa de Morelos,9
+2020-03-19,Cuauhtemoc,1
+2020-03-19,Gustavo A. Madero,8
+2020-03-19,Iztapalapa,1
+2020-03-19,La Magdalena Contreras,1
+2020-03-19,Miguel Hidalgo,16
+2020-03-19,Milpa Alta,1
+2020-03-19,Tlalpan,5
+2020-03-19,Tlahuac,1
+2020-03-19,Venustiano Carranza,4
+2020-03-19,Xochimilco,3
+2020-03-19,Alvaro Obregon,4
+2020-03-20,Azcapotzalco,2
+2020-03-20,Benito Juarez,1
+2020-03-20,Coyoacan,2
+2020-03-20,Cuajimalpa de Morelos,10
+2020-03-20,Cuauhtemoc,1
+2020-03-20,Gustavo A. Madero,3
+2020-03-20,Iztacalco,2
+2020-03-20,Iztapalapa,2
+2020-03-20,La Magdalena Contreras,2
+2020-03-20,Miguel Hidalgo,3
+2020-03-20,Tlalpan,1
+2020-03-20,Tlahuac,1
+2020-03-20,Venustiano Carranza,1
+2020-03-20,Xochimilco,1
+2020-03-20,Alvaro Obregon,5
+2020-03-21,Azcapotzalco,2
+2020-03-21,Benito Juarez,2
+2020-03-21,Coyoacan,1
+2020-03-21,Cuajimalpa de Morelos,1
+2020-03-21,Cuauhtemoc,4
+2020-03-21,Gustavo A. Madero,3
+2020-03-21,Iztapalapa,2
+2020-03-21,La Magdalena Contreras,1
+2020-03-21,Miguel Hidalgo,1
+2020-03-21,Venustiano Carranza,1
+2020-03-21,Xochimilco,3
+2020-03-21,Alvaro Obregon,2
+2020-03-22,Azcapotzalco,3
+2020-03-22,Coyoacan,1
+2020-03-22,Gustavo A. Madero,3
+2020-03-22,Iztacalco,2
+2020-03-22,Iztapalapa,1
+2020-03-22,La Magdalena Contreras,2
+2020-03-22,Miguel Hidalgo,1
+2020-03-22,Milpa Alta,1
+2020-03-22,Tlalpan,2
+2020-03-22,Venustiano Carranza,2
+2020-03-22,Xochimilco,1
+2020-03-22,Alvaro Obregon,2
+2020-03-23,Azcapotzalco,10
+2020-03-23,Benito Juarez,2
+2020-03-23,Coyoacan,2
+2020-03-23,Cuajimalpa de Morelos,4
+2020-03-23,Cuauhtemoc,3
+2020-03-23,Gustavo A. Madero,8
+2020-03-23,Iztacalco,2
+2020-03-23,Iztapalapa,8
+2020-03-23,La Magdalena Contreras,4
+2020-03-23,Miguel Hidalgo,4
+2020-03-23,Tlalpan,3
+2020-03-23,Tlahuac,1
+2020-03-23,Venustiano Carranza,5
+2020-03-23,Xochimilco,5
+2020-03-23,Alvaro Obregon,1
+2020-03-24,Azcapotzalco,8
+2020-03-24,Benito Juarez,5
+2020-03-24,Cuajimalpa de Morelos,21
+2020-03-24,Cuauhtemoc,2
+2020-03-24,Gustavo A. Madero,9
+2020-03-24,Iztacalco,6
+2020-03-24,Iztapalapa,9
+2020-03-24,La Magdalena Contreras,10
+2020-03-24,Miguel Hidalgo,4
+2020-03-24,Tlalpan,3
+2020-03-24,Venustiano Carranza,2
+2020-03-24,Xochimilco,3
+2020-03-24,Alvaro Obregon,2
+2020-03-25,Azcapotzalco,4
+2020-03-25,Benito Juarez,2
+2020-03-25,Coyoacan,3
+2020-03-25,Cuajimalpa de Morelos,10
+2020-03-25,Cuauhtemoc,2
+2020-03-25,Gustavo A. Madero,8
+2020-03-25,Iztacalco,7
+2020-03-25,Iztapalapa,3
+2020-03-25,La Magdalena Contreras,6
+2020-03-25,Miguel Hidalgo,3
+2020-03-25,Milpa Alta,1
+2020-03-25,Tlalpan,4
+2020-03-25,Venustiano Carranza,1
+2020-03-25,Xochimilco,2
+2020-03-25,Alvaro Obregon,3
+2020-03-26,Azcapotzalco,8
+2020-03-26,Benito Juarez,4
+2020-03-26,Coyoacan,7
+2020-03-26,Cuajimalpa de Morelos,14
+2020-03-26,Cuauhtemoc,6
+2020-03-26,Gustavo A. Madero,9
+2020-03-26,Iztacalco,8
+2020-03-26,Iztapalapa,5
+2020-03-26,La Magdalena Contreras,2
+2020-03-26,Miguel Hidalgo,7
+2020-03-26,Milpa Alta,3
+2020-03-26,Tlalpan,8
+2020-03-26,Tlahuac,1
+2020-03-26,Venustiano Carranza,4
+2020-03-26,Alvaro Obregon,9
+2020-03-27,Azcapotzalco,9
+2020-03-27,Benito Juarez,5
+2020-03-27,Coyoacan,7
+2020-03-27,Cuajimalpa de Morelos,23
+2020-03-27,Cuauhtemoc,4
+2020-03-27,Gustavo A. Madero,10
+2020-03-27,Iztacalco,12
+2020-03-27,Iztapalapa,9
+2020-03-27,La Magdalena Contreras,5
+2020-03-27,Miguel Hidalgo,2
+2020-03-27,Tlalpan,4
+2020-03-27,Venustiano Carranza,4
+2020-03-27,Xochimilco,6
+2020-03-27,Alvaro Obregon,5
+2020-03-28,Azcapotzalco,6
+2020-03-28,Benito Juarez,7
+2020-03-28,Coyoacan,6
+2020-03-28,Cuajimalpa de Morelos,7
+2020-03-28,Cuauhtemoc,6
+2020-03-28,Gustavo A. Madero,13
+2020-03-28,Iztacalco,7
+2020-03-28,Iztapalapa,10
+2020-03-28,La Magdalena Contreras,2
+2020-03-28,Miguel Hidalgo,5
+2020-03-28,Milpa Alta,2
+2020-03-28,Tlalpan,3
+2020-03-28,Tlahuac,1
+2020-03-28,Venustiano Carranza,1
+2020-03-28,Xochimilco,4
+2020-03-28,Alvaro Obregon,3
+2020-03-29,Azcapotzalco,9
+2020-03-29,Benito Juarez,6
+2020-03-29,Coyoacan,2
+2020-03-29,Cuajimalpa de Morelos,24
+2020-03-29,Cuauhtemoc,2
+2020-03-29,Gustavo A. Madero,9
+2020-03-29,Iztacalco,3
+2020-03-29,Iztapalapa,6
+2020-03-29,La Magdalena Contreras,3
+2020-03-29,Miguel Hidalgo,2
+2020-03-29,Milpa Alta,1
+2020-03-29,Tlalpan,3
+2020-03-29,Venustiano Carranza,2
+2020-03-29,Xochimilco,6
+2020-03-29,Alvaro Obregon,3
+2020-03-30,Azcapotzalco,15
+2020-03-30,Benito Juarez,3
+2020-03-30,Coyoacan,5
+2020-03-30,Cuajimalpa de Morelos,26
+2020-03-30,Cuauhtemoc,7
+2020-03-30,Gustavo A. Madero,27
+2020-03-30,Iztacalco,14
+2020-03-30,Iztapalapa,9
+2020-03-30,La Magdalena Contreras,20
+2020-03-30,Miguel Hidalgo,6
+2020-03-30,Milpa Alta,1
+2020-03-30,Tlalpan,10
+2020-03-30,Tlahuac,2
+2020-03-30,Venustiano Carranza,7
+2020-03-30,Xochimilco,8
+2020-03-30,Alvaro Obregon,9
+2020-03-31,Azcapotzalco,19
+2020-03-31,Benito Juarez,11
+2020-03-31,Coyoacan,5
+2020-03-31,Cuajimalpa de Morelos,38
+2020-03-31,Cuauhtemoc,13
+2020-03-31,Gustavo A. Madero,15
+2020-03-31,Iztacalco,14
+2020-03-31,Iztapalapa,6
+2020-03-31,La Magdalena Contreras,12
+2020-03-31,Miguel Hidalgo,5
+2020-03-31,Tlalpan,6
+2020-03-31,Tlahuac,3
+2020-03-31,Venustiano Carranza,5
+2020-03-31,Xochimilco,3
+2020-03-31,Alvaro Obregon,5
+2020-04-01,Azcapotzalco,26
+2020-04-01,Benito Juarez,9
+2020-04-01,Coyoacan,7
+2020-04-01,Cuajimalpa de Morelos,47
+2020-04-01,Cuauhtemoc,5
+2020-04-01,Gustavo A. Madero,24
+2020-04-01,Iztacalco,11
+2020-04-01,Iztapalapa,10
+2020-04-01,La Magdalena Contreras,12
+2020-04-01,Miguel Hidalgo,10
+2020-04-01,Milpa Alta,3
+2020-04-01,Tlalpan,4
+2020-04-01,Tlahuac,1
+2020-04-01,Venustiano Carranza,4
+2020-04-01,Xochimilco,8
+2020-04-01,Alvaro Obregon,8
+2020-04-02,Azcapotzalco,22
+2020-04-02,Benito Juarez,7
+2020-04-02,Coyoacan,7
+2020-04-02,Cuajimalpa de Morelos,32
+2020-04-02,Cuauhtemoc,4
+2020-04-02,Gustavo A. Madero,22
+2020-04-02,Iztacalco,29
+2020-04-02,Iztapalapa,13
+2020-04-02,La Magdalena Contreras,9
+2020-04-02,Miguel Hidalgo,7
+2020-04-02,Tlalpan,4
+2020-04-02,Tlahuac,5
+2020-04-02,Venustiano Carranza,5
+2020-04-02,Xochimilco,5
+2020-04-02,Alvaro Obregon,8
+2020-04-03,Azcapotzalco,15
+2020-04-03,Benito Juarez,15
+2020-04-03,Coyoacan,11
+2020-04-03,Cuajimalpa de Morelos,41
+2020-04-03,Cuauhtemoc,6
+2020-04-03,Gustavo A. Madero,25
+2020-04-03,Iztacalco,15
+2020-04-03,Iztapalapa,14
+2020-04-03,La Magdalena Contreras,19
+2020-04-03,Milpa Alta,4
+2020-04-03,Tlalpan,7
+2020-04-03,Tlahuac,1
+2020-04-03,Venustiano Carranza,8
+2020-04-03,Xochimilco,9
+2020-04-03,Alvaro Obregon,9
+2020-04-04,Azcapotzalco,4
+2020-04-04,Benito Juarez,5
+2020-04-04,Coyoacan,8
+2020-04-04,Cuajimalpa de Morelos,25
+2020-04-04,Cuauhtemoc,6
+2020-04-04,Gustavo A. Madero,18
+2020-04-04,Iztacalco,12
+2020-04-04,Iztapalapa,19
+2020-04-04,La Magdalena Contreras,4
+2020-04-04,Miguel Hidalgo,4
+2020-04-04,Tlalpan,2
+2020-04-04,Tlahuac,4
+2020-04-04,Venustiano Carranza,8
+2020-04-04,Xochimilco,3
+2020-04-04,Alvaro Obregon,3
+2020-04-05,Azcapotzalco,7
+2020-04-05,Benito Juarez,4
+2020-04-05,Coyoacan,10
+2020-04-05,Cuajimalpa de Morelos,22
+2020-04-05,Cuauhtemoc,8
+2020-04-05,Gustavo A. Madero,16
+2020-04-05,Iztacalco,16
+2020-04-05,Iztapalapa,12
+2020-04-05,La Magdalena Contreras,3
+2020-04-05,Miguel Hidalgo,2
+2020-04-05,Milpa Alta,3
+2020-04-05,Tlalpan,5
+2020-04-05,Tlahuac,3
+2020-04-05,Venustiano Carranza,7
+2020-04-05,Xochimilco,7
+2020-04-05,Alvaro Obregon,4
+2020-04-06,Azcapotzalco,29
+2020-04-06,Benito Juarez,10
+2020-04-06,Coyoacan,22
+2020-04-06,Cuajimalpa de Morelos,51
+2020-04-06,Cuauhtemoc,13
+2020-04-06,Gustavo A. Madero,42
+2020-04-06,Iztacalco,29
+2020-04-06,Iztapalapa,24
+2020-04-06,La Magdalena Contreras,23
+2020-04-06,Miguel Hidalgo,7
+2020-04-06,Milpa Alta,1
+2020-04-06,Tlalpan,8
+2020-04-06,Tlahuac,4
+2020-04-06,Venustiano Carranza,18
+2020-04-06,Xochimilco,11
+2020-04-06,Alvaro Obregon,13
+2020-04-07,Azcapotzalco,26
+2020-04-07,Benito Juarez,11
+2020-04-07,Coyoacan,16
+2020-04-07,Cuajimalpa de Morelos,34
+2020-04-07,Cuauhtemoc,9
+2020-04-07,Gustavo A. Madero,39
+2020-04-07,Iztacalco,23
+2020-04-07,Iztapalapa,23
+2020-04-07,La Magdalena Contreras,20
+2020-04-07,Miguel Hidalgo,3
+2020-04-07,Milpa Alta,13
+2020-04-07,Tlalpan,18
+2020-04-07,Tlahuac,5
+2020-04-07,Venustiano Carranza,11
+2020-04-07,Xochimilco,21
+2020-04-07,Alvaro Obregon,5
+2020-04-08,Azcapotzalco,39
+2020-04-08,Benito Juarez,10
+2020-04-08,Coyoacan,18
+2020-04-08,Cuajimalpa de Morelos,47
+2020-04-08,Cuauhtemoc,18
+2020-04-08,Gustavo A. Madero,47
+2020-04-08,Iztacalco,25
+2020-04-08,Iztapalapa,18
+2020-04-08,La Magdalena Contreras,26
+2020-04-08,Miguel Hidalgo,9
+2020-04-08,Milpa Alta,2
+2020-04-08,Tlalpan,17
+2020-04-08,Tlahuac,3
+2020-04-08,Venustiano Carranza,8
+2020-04-08,Xochimilco,14
+2020-04-08,Alvaro Obregon,8
+2020-04-09,Azcapotzalco,24
+2020-04-09,Benito Juarez,11
+2020-04-09,Coyoacan,17
+2020-04-09,Cuajimalpa de Morelos,49
+2020-04-09,Cuauhtemoc,13
+2020-04-09,Gustavo A. Madero,21
+2020-04-09,Iztacalco,17
+2020-04-09,Iztapalapa,24
+2020-04-09,La Magdalena Contreras,23
+2020-04-09,Miguel Hidalgo,6
+2020-04-09,Milpa Alta,5
+2020-04-09,Tlalpan,12
+2020-04-09,Tlahuac,8
+2020-04-09,Venustiano Carranza,7
+2020-04-09,Xochimilco,6
+2020-04-09,Alvaro Obregon,16
+2020-04-10,Azcapotzalco,32
+2020-04-10,Benito Juarez,12
+2020-04-10,Coyoacan,26
+2020-04-10,Cuajimalpa de Morelos,37
+2020-04-10,Cuauhtemoc,13
+2020-04-10,Gustavo A. Madero,33
+2020-04-10,Iztacalco,33
+2020-04-10,Iztapalapa,24
+2020-04-10,La Magdalena Contreras,15
+2020-04-10,Miguel Hidalgo,6
+2020-04-10,Milpa Alta,13
+2020-04-10,Tlalpan,17
+2020-04-10,Tlahuac,5
+2020-04-10,Venustiano Carranza,7
+2020-04-10,Xochimilco,12
+2020-04-10,Alvaro Obregon,17
+2020-04-11,Azcapotzalco,30
+2020-04-11,Benito Juarez,11
+2020-04-11,Coyoacan,25
+2020-04-11,Cuajimalpa de Morelos,28
+2020-04-11,Cuauhtemoc,10
+2020-04-11,Gustavo A. Madero,25
+2020-04-11,Iztacalco,26
+2020-04-11,Iztapalapa,16
+2020-04-11,La Magdalena Contreras,7
+2020-04-11,Miguel Hidalgo,5
+2020-04-11,Milpa Alta,2
+2020-04-11,Tlalpan,16
+2020-04-11,Tlahuac,2
+2020-04-11,Venustiano Carranza,6
+2020-04-11,Xochimilco,16
+2020-04-11,Alvaro Obregon,7
+2020-04-12,Azcapotzalco,31
+2020-04-12,Benito Juarez,11
+2020-04-12,Coyoacan,11
+2020-04-12,Cuajimalpa de Morelos,44
+2020-04-12,Cuauhtemoc,8
+2020-04-12,Gustavo A. Madero,39
+2020-04-12,Iztacalco,31
+2020-04-12,Iztapalapa,17
+2020-04-12,La Magdalena Contreras,8
+2020-04-12,Miguel Hidalgo,9
+2020-04-12,Milpa Alta,5
+2020-04-12,Tlalpan,15
+2020-04-12,Tlahuac,5
+2020-04-12,Venustiano Carranza,6
+2020-04-12,Xochimilco,10
+2020-04-12,Alvaro Obregon,8
+2020-04-13,Azcapotzalco,43
+2020-04-13,Benito Juarez,22
+2020-04-13,Coyoacan,28
+2020-04-13,Cuajimalpa de Morelos,71
+2020-04-13,Cuauhtemoc,22
+2020-04-13,Gustavo A. Madero,62
+2020-04-13,Iztacalco,70
+2020-04-13,Iztapalapa,54
+2020-04-13,La Magdalena Contreras,20
+2020-04-13,Miguel Hidalgo,14
+2020-04-13,Milpa Alta,5
+2020-04-13,Tlalpan,34
+2020-04-13,Tlahuac,13
+2020-04-13,Venustiano Carranza,11
+2020-04-13,Xochimilco,19
+2020-04-13,Alvaro Obregon,16
+2020-04-14,Azcapotzalco,62
+2020-04-14,Benito Juarez,22
+2020-04-14,Coyoacan,23
+2020-04-14,Cuajimalpa de Morelos,82
+2020-04-14,Cuauhtemoc,16
+2020-04-14,Gustavo A. Madero,48
+2020-04-14,Iztacalco,51
+2020-04-14,Iztapalapa,51
+2020-04-14,La Magdalena Contreras,31
+2020-04-14,Miguel Hidalgo,14
+2020-04-14,Milpa Alta,10
+2020-04-14,Tlalpan,23
+2020-04-14,Tlahuac,11
+2020-04-14,Venustiano Carranza,22
+2020-04-14,Xochimilco,24
+2020-04-14,Alvaro Obregon,29
+2020-04-15,Azcapotzalco,58
+2020-04-15,Benito Juarez,16
+2020-04-15,Coyoacan,30
+2020-04-15,Cuajimalpa de Morelos,84
+2020-04-15,Cuauhtemoc,20
+2020-04-15,Gustavo A. Madero,56
+2020-04-15,Iztacalco,57
+2020-04-15,Iztapalapa,44
+2020-04-15,La Magdalena Contreras,14
+2020-04-15,Miguel Hidalgo,8
+2020-04-15,Milpa Alta,8
+2020-04-15,Tlalpan,22
+2020-04-15,Tlahuac,10
+2020-04-15,Venustiano Carranza,15
+2020-04-15,Xochimilco,24
+2020-04-15,Alvaro Obregon,23
+2020-04-16,Azcapotzalco,53
+2020-04-16,Benito Juarez,16
+2020-04-16,Coyoacan,34
+2020-04-16,Cuajimalpa de Morelos,89
+2020-04-16,Cuauhtemoc,20
+2020-04-16,Gustavo A. Madero,47
+2020-04-16,Iztacalco,57
+2020-04-16,Iztapalapa,62
+2020-04-16,La Magdalena Contreras,12
+2020-04-16,Miguel Hidalgo,9
+2020-04-16,Milpa Alta,5
+2020-04-16,Tlalpan,34
+2020-04-16,Tlahuac,11
+2020-04-16,Venustiano Carranza,10
+2020-04-16,Xochimilco,19
+2020-04-16,Alvaro Obregon,29
+2020-04-17,Azcapotzalco,66
+2020-04-17,Benito Juarez,21
+2020-04-17,Coyoacan,32
+2020-04-17,Cuajimalpa de Morelos,75
+2020-04-17,Cuauhtemoc,23
+2020-04-17,Gustavo A. Madero,75
+2020-04-17,Iztacalco,50
+2020-04-17,Iztapalapa,69
+2020-04-17,La Magdalena Contreras,28
+2020-04-17,Miguel Hidalgo,15
+2020-04-17,Milpa Alta,24
+2020-04-17,Tlalpan,51
+2020-04-17,Tlahuac,15
+2020-04-17,Venustiano Carranza,23
+2020-04-17,Xochimilco,27
+2020-04-17,Alvaro Obregon,30
+2020-04-18,Azcapotzalco,28
+2020-04-18,Benito Juarez,17
+2020-04-18,Coyoacan,27
+2020-04-18,Cuajimalpa de Morelos,64
+2020-04-18,Cuauhtemoc,12
+2020-04-18,Gustavo A. Madero,53
+2020-04-18,Iztacalco,43
+2020-04-18,Iztapalapa,47
+2020-04-18,La Magdalena Contreras,16
+2020-04-18,Miguel Hidalgo,6
+2020-04-18,Milpa Alta,12
+2020-04-18,Tlalpan,30
+2020-04-18,Tlahuac,13
+2020-04-18,Venustiano Carranza,16
+2020-04-18,Xochimilco,27
+2020-04-18,Alvaro Obregon,13
+2020-04-19,Azcapotzalco,27
+2020-04-19,Benito Juarez,16
+2020-04-19,Coyoacan,24
+2020-04-19,Cuajimalpa de Morelos,57
+2020-04-19,Cuauhtemoc,6
+2020-04-19,Gustavo A. Madero,46
+2020-04-19,Iztacalco,39
+2020-04-19,Iztapalapa,65
+2020-04-19,La Magdalena Contreras,18
+2020-04-19,Miguel Hidalgo,10
+2020-04-19,Milpa Alta,7
+2020-04-19,Tlalpan,23
+2020-04-19,Tlahuac,11
+2020-04-19,Venustiano Carranza,11
+2020-04-19,Xochimilco,16
+2020-04-19,Alvaro Obregon,14
+2020-04-20,Azcapotzalco,58
+2020-04-20,Benito Juarez,27
+2020-04-20,Coyoacan,42
+2020-04-20,Cuajimalpa de Morelos,114
+2020-04-20,Cuauhtemoc,30
+2020-04-20,Gustavo A. Madero,94
+2020-04-20,Iztacalco,82
+2020-04-20,Iztapalapa,111
+2020-04-20,La Magdalena Contreras,18
+2020-04-20,Miguel Hidalgo,22
+2020-04-20,Milpa Alta,25
+2020-04-20,Tlalpan,53
+2020-04-20,Tlahuac,24
+2020-04-20,Venustiano Carranza,28
+2020-04-20,Xochimilco,55
+2020-04-20,Alvaro Obregon,25
+2020-04-21,Azcapotzalco,74
+2020-04-21,Benito Juarez,18
+2020-04-21,Coyoacan,40
+2020-04-21,Cuajimalpa de Morelos,106
+2020-04-21,Cuauhtemoc,29
+2020-04-21,Gustavo A. Madero,113
+2020-04-21,Iztacalco,53
+2020-04-21,Iztapalapa,98
+2020-04-21,La Magdalena Contreras,22
+2020-04-21,Miguel Hidalgo,26
+2020-04-21,Milpa Alta,17
+2020-04-21,Tlalpan,60
+2020-04-21,Tlahuac,24
+2020-04-21,Venustiano Carranza,28
+2020-04-21,Xochimilco,42
+2020-04-21,Alvaro Obregon,33
+2020-04-22,Azcapotzalco,53
+2020-04-22,Benito Juarez,25
+2020-04-22,Coyoacan,30
+2020-04-22,Cuajimalpa de Morelos,112
+2020-04-22,Cuauhtemoc,26
+2020-04-22,Gustavo A. Madero,83
+2020-04-22,Iztacalco,52
+2020-04-22,Iztapalapa,111
+2020-04-22,La Magdalena Contreras,25
+2020-04-22,Miguel Hidalgo,13
+2020-04-22,Milpa Alta,27
+2020-04-22,Tlalpan,42
+2020-04-22,Tlahuac,33
+2020-04-22,Venustiano Carranza,44
+2020-04-22,Xochimilco,40
+2020-04-22,Alvaro Obregon,23
+2020-04-23,Azcapotzalco,75
+2020-04-23,Benito Juarez,25
+2020-04-23,Coyoacan,52
+2020-04-23,Cuajimalpa de Morelos,96
+2020-04-23,Cuauhtemoc,26
+2020-04-23,Gustavo A. Madero,103
+2020-04-23,Iztacalco,60
+2020-04-23,Iztapalapa,88
+2020-04-23,La Magdalena Contreras,26
+2020-04-23,Miguel Hidalgo,21
+2020-04-23,Milpa Alta,17
+2020-04-23,Tlalpan,33
+2020-04-23,Tlahuac,22
+2020-04-23,Venustiano Carranza,28
+2020-04-23,Xochimilco,36
+2020-04-23,Alvaro Obregon,32
+2020-04-24,Azcapotzalco,61
+2020-04-24,Benito Juarez,40
+2020-04-24,Coyoacan,44
+2020-04-24,Cuajimalpa de Morelos,89
+2020-04-24,Cuauhtemoc,32
+2020-04-24,Gustavo A. Madero,84
+2020-04-24,Iztacalco,103
+2020-04-24,Iztapalapa,113
+2020-04-24,La Magdalena Contreras,53
+2020-04-24,Miguel Hidalgo,28
+2020-04-24,Milpa Alta,18
+2020-04-24,Tlalpan,43
+2020-04-24,Tlahuac,24
+2020-04-24,Venustiano Carranza,37
+2020-04-24,Xochimilco,54
+2020-04-24,Alvaro Obregon,38
+2020-04-25,Azcapotzalco,35
+2020-04-25,Benito Juarez,20
+2020-04-25,Coyoacan,34
+2020-04-25,Cuajimalpa de Morelos,54
+2020-04-25,Cuauhtemoc,21
+2020-04-25,Gustavo A. Madero,62
+2020-04-25,Iztacalco,37
+2020-04-25,Iztapalapa,66
+2020-04-25,La Magdalena Contreras,15
+2020-04-25,Miguel Hidalgo,14
+2020-04-25,Milpa Alta,19
+2020-04-25,Tlalpan,33
+2020-04-25,Tlahuac,11
+2020-04-25,Venustiano Carranza,16
+2020-04-25,Xochimilco,29
+2020-04-25,Alvaro Obregon,15
+2020-04-26,Azcapotzalco,33
+2020-04-26,Benito Juarez,20
+2020-04-26,Coyoacan,25
+2020-04-26,Cuajimalpa de Morelos,64
+2020-04-26,Cuauhtemoc,22
+2020-04-26,Gustavo A. Madero,54
+2020-04-26,Iztacalco,39
+2020-04-26,Iztapalapa,86
+2020-04-26,La Magdalena Contreras,18
+2020-04-26,Miguel Hidalgo,9
+2020-04-26,Milpa Alta,12
+2020-04-26,Tlalpan,21
+2020-04-26,Tlahuac,18
+2020-04-26,Venustiano Carranza,25
+2020-04-26,Xochimilco,17
+2020-04-26,Alvaro Obregon,21
+2020-04-27,Azcapotzalco,77
+2020-04-27,Benito Juarez,22
+2020-04-27,Coyoacan,39
+2020-04-27,Cuajimalpa de Morelos,102
+2020-04-27,Cuauhtemoc,39
+2020-04-27,Gustavo A. Madero,110
+2020-04-27,Iztacalco,115
+2020-04-27,Iztapalapa,129
+2020-04-27,La Magdalena Contreras,36
+2020-04-27,Miguel Hidalgo,23
+2020-04-27,Milpa Alta,22
+2020-04-27,Tlalpan,44
+2020-04-27,Tlahuac,27
+2020-04-27,Venustiano Carranza,44
+2020-04-27,Xochimilco,43
+2020-04-27,Alvaro Obregon,54
+2020-04-28,Azcapotzalco,59
+2020-04-28,Benito Juarez,32
+2020-04-28,Coyoacan,58
+2020-04-28,Cuajimalpa de Morelos,90
+2020-04-28,Cuauhtemoc,45
+2020-04-28,Gustavo A. Madero,115
+2020-04-28,Iztacalco,100
+2020-04-28,Iztapalapa,129
+2020-04-28,La Magdalena Contreras,13
+2020-04-28,Miguel Hidalgo,25
+2020-04-28,Milpa Alta,25
+2020-04-28,Tlalpan,40
+2020-04-28,Tlahuac,43
+2020-04-28,Venustiano Carranza,45
+2020-04-28,Xochimilco,43
+2020-04-28,Alvaro Obregon,45
+2020-04-29,Azcapotzalco,93
+2020-04-29,Benito Juarez,35
+2020-04-29,Coyoacan,49
+2020-04-29,Cuajimalpa de Morelos,88
+2020-04-29,Cuauhtemoc,35
+2020-04-29,Gustavo A. Madero,115
+2020-04-29,Iztacalco,88
+2020-04-29,Iztapalapa,150
+2020-04-29,La Magdalena Contreras,32
+2020-04-29,Miguel Hidalgo,29
+2020-04-29,Milpa Alta,27
+2020-04-29,Tlalpan,61
+2020-04-29,Tlahuac,29
+2020-04-29,Venustiano Carranza,38
+2020-04-29,Xochimilco,34
+2020-04-29,Alvaro Obregon,38
+2020-04-30,Azcapotzalco,76
+2020-04-30,Benito Juarez,36
+2020-04-30,Coyoacan,70
+2020-04-30,Cuajimalpa de Morelos,114
+2020-04-30,Cuauhtemoc,25
+2020-04-30,Gustavo A. Madero,104
+2020-04-30,Iztacalco,86
+2020-04-30,Iztapalapa,144
+2020-04-30,La Magdalena Contreras,27
+2020-04-30,Miguel Hidalgo,22
+2020-04-30,Milpa Alta,19
+2020-04-30,Tlalpan,49
+2020-04-30,Tlahuac,28
+2020-04-30,Venustiano Carranza,48
+2020-04-30,Xochimilco,48
+2020-04-30,Alvaro Obregon,36
+2020-05-01,Azcapotzalco,68
+2020-05-01,Benito Juarez,17
+2020-05-01,Coyoacan,28
+2020-05-01,Cuajimalpa de Morelos,92
+2020-05-01,Cuauhtemoc,24
+2020-05-01,Gustavo A. Madero,85
+2020-05-01,Iztacalco,78
+2020-05-01,Iztapalapa,97
+2020-05-01,La Magdalena Contreras,15
+2020-05-01,Miguel Hidalgo,13
+2020-05-01,Milpa Alta,10
+2020-05-01,Tlalpan,40
+2020-05-01,Tlahuac,18
+2020-05-01,Venustiano Carranza,24
+2020-05-01,Xochimilco,34
+2020-05-01,Alvaro Obregon,33
+2020-05-02,Azcapotzalco,60
+2020-05-02,Benito Juarez,29
+2020-05-02,Coyoacan,37
+2020-05-02,Cuajimalpa de Morelos,79
+2020-05-02,Cuauhtemoc,25
+2020-05-02,Gustavo A. Madero,118
+2020-05-02,Iztacalco,68
+2020-05-02,Iztapalapa,94
+2020-05-02,La Magdalena Contreras,11
+2020-05-02,Miguel Hidalgo,20
+2020-05-02,Milpa Alta,22
+2020-05-02,Tlalpan,45
+2020-05-02,Tlahuac,23
+2020-05-02,Venustiano Carranza,23
+2020-05-02,Xochimilco,33
+2020-05-02,Alvaro Obregon,21
+2020-05-03,Azcapotzalco,74
+2020-05-03,Benito Juarez,30
+2020-05-03,Coyoacan,33
+2020-05-03,Cuajimalpa de Morelos,75
+2020-05-03,Cuauhtemoc,20
+2020-05-03,Gustavo A. Madero,62
+2020-05-03,Iztacalco,55
+2020-05-03,Iztapalapa,98
+2020-05-03,La Magdalena Contreras,13
+2020-05-03,Miguel Hidalgo,20
+2020-05-03,Milpa Alta,16
+2020-05-03,Tlalpan,37
+2020-05-03,Tlahuac,30
+2020-05-03,Venustiano Carranza,35
+2020-05-03,Xochimilco,31
+2020-05-03,Alvaro Obregon,19
+2020-05-04,Azcapotzalco,121
+2020-05-04,Benito Juarez,40
+2020-05-04,Coyoacan,83
+2020-05-04,Cuajimalpa de Morelos,129
+2020-05-04,Cuauhtemoc,47
+2020-05-04,Gustavo A. Madero,155
+2020-05-04,Iztacalco,120
+2020-05-04,Iztapalapa,155
+2020-05-04,La Magdalena Contreras,28
+2020-05-04,Miguel Hidalgo,30
+2020-05-04,Milpa Alta,30
+2020-05-04,Tlalpan,79
+2020-05-04,Tlahuac,47
+2020-05-04,Venustiano Carranza,82
+2020-05-04,Xochimilco,89
+2020-05-04,Alvaro Obregon,48
+2020-05-05,Azcapotzalco,128
+2020-05-05,Benito Juarez,38
+2020-05-05,Coyoacan,61
+2020-05-05,Cuajimalpa de Morelos,125
+2020-05-05,Cuauhtemoc,44
+2020-05-05,Gustavo A. Madero,121
+2020-05-05,Iztacalco,67
+2020-05-05,Iztapalapa,156
+2020-05-05,La Magdalena Contreras,23
+2020-05-05,Miguel Hidalgo,24
+2020-05-05,Milpa Alta,23
+2020-05-05,Tlalpan,75
+2020-05-05,Tlahuac,40
+2020-05-05,Venustiano Carranza,62
+2020-05-05,Xochimilco,52
+2020-05-05,Alvaro Obregon,46
+2020-05-06,Azcapotzalco,114
+2020-05-06,Benito Juarez,35
+2020-05-06,Coyoacan,77
+2020-05-06,Cuajimalpa de Morelos,130
+2020-05-06,Cuauhtemoc,46
+2020-05-06,Gustavo A. Madero,123
+2020-05-06,Iztacalco,119
+2020-05-06,Iztapalapa,174
+2020-05-06,La Magdalena Contreras,22
+2020-05-06,Miguel Hidalgo,32
+2020-05-06,Milpa Alta,34
+2020-05-06,Tlalpan,84
+2020-05-06,Tlahuac,62
+2020-05-06,Venustiano Carranza,77
+2020-05-06,Xochimilco,59
+2020-05-06,Alvaro Obregon,68
+2020-05-07,Azcapotzalco,127
+2020-05-07,Benito Juarez,35
+2020-05-07,Coyoacan,87
+2020-05-07,Cuajimalpa de Morelos,136
+2020-05-07,Cuauhtemoc,57
+2020-05-07,Gustavo A. Madero,145
+2020-05-07,Iztacalco,100
+2020-05-07,Iztapalapa,152
+2020-05-07,La Magdalena Contreras,26
+2020-05-07,Miguel Hidalgo,35
+2020-05-07,Milpa Alta,30
+2020-05-07,Tlalpan,87
+2020-05-07,Tlahuac,36
+2020-05-07,Venustiano Carranza,83
+2020-05-07,Xochimilco,70
+2020-05-07,Alvaro Obregon,53
+2020-05-08,Azcapotzalco,146
+2020-05-08,Benito Juarez,42
+2020-05-08,Coyoacan,92
+2020-05-08,Cuajimalpa de Morelos,104
+2020-05-08,Cuauhtemoc,53
+2020-05-08,Gustavo A. Madero,148
+2020-05-08,Iztacalco,109
+2020-05-08,Iztapalapa,221
+2020-05-08,La Magdalena Contreras,36
+2020-05-08,Miguel Hidalgo,35
+2020-05-08,Milpa Alta,29
+2020-05-08,Tlalpan,84
+2020-05-08,Tlahuac,46
+2020-05-08,Venustiano Carranza,70
+2020-05-08,Xochimilco,87
+2020-05-08,Alvaro Obregon,44
+2020-05-09,Azcapotzalco,71
+2020-05-09,Benito Juarez,43
+2020-05-09,Coyoacan,38
+2020-05-09,Cuajimalpa de Morelos,82
+2020-05-09,Cuauhtemoc,31
+2020-05-09,Gustavo A. Madero,76
+2020-05-09,Iztacalco,68
+2020-05-09,Iztapalapa,135
+2020-05-09,La Magdalena Contreras,13
+2020-05-09,Miguel Hidalgo,17
+2020-05-09,Milpa Alta,19
+2020-05-09,Tlalpan,34
+2020-05-09,Tlahuac,31
+2020-05-09,Venustiano Carranza,25
+2020-05-09,Xochimilco,48
+2020-05-09,Alvaro Obregon,36
+2020-05-10,Azcapotzalco,84
+2020-05-10,Benito Juarez,31
+2020-05-10,Coyoacan,40
+2020-05-10,Cuajimalpa de Morelos,63
+2020-05-10,Cuauhtemoc,22
+2020-05-10,Gustavo A. Madero,75
+2020-05-10,Iztacalco,60
+2020-05-10,Iztapalapa,94
+2020-05-10,La Magdalena Contreras,21
+2020-05-10,Miguel Hidalgo,16
+2020-05-10,Milpa Alta,23
+2020-05-10,Tlalpan,32
+2020-05-10,Tlahuac,28
+2020-05-10,Venustiano Carranza,33
+2020-05-10,Xochimilco,54
+2020-05-10,Alvaro Obregon,29
+2020-05-11,Azcapotzalco,143
+2020-05-11,Benito Juarez,68
+2020-05-11,Coyoacan,95
+2020-05-11,Cuajimalpa de Morelos,130
+2020-05-11,Cuauhtemoc,84
+2020-05-11,Gustavo A. Madero,162
+2020-05-11,Iztacalco,122
+2020-05-11,Iztapalapa,188
+2020-05-11,La Magdalena Contreras,63
+2020-05-11,Miguel Hidalgo,61
+2020-05-11,Milpa Alta,28
+2020-05-11,Tlalpan,77
+2020-05-11,Tlahuac,63
+2020-05-11,Venustiano Carranza,74
+2020-05-11,Xochimilco,80
+2020-05-11,Alvaro Obregon,61
+2020-05-12,Azcapotzalco,160
+2020-05-12,Benito Juarez,59
+2020-05-12,Coyoacan,96
+2020-05-12,Cuajimalpa de Morelos,99
+2020-05-12,Cuauhtemoc,68
+2020-05-12,Gustavo A. Madero,152
+2020-05-12,Iztacalco,111
+2020-05-12,Iztapalapa,185
+2020-05-12,La Magdalena Contreras,32
+2020-05-12,Miguel Hidalgo,52
+2020-05-12,Milpa Alta,31
+2020-05-12,Tlalpan,75
+2020-05-12,Tlahuac,76
+2020-05-12,Venustiano Carranza,91
+2020-05-12,Xochimilco,72
+2020-05-12,Alvaro Obregon,79
+2020-05-13,Azcapotzalco,152
+2020-05-13,Benito Juarez,46
+2020-05-13,Coyoacan,77
+2020-05-13,Cuajimalpa de Morelos,133
+2020-05-13,Cuauhtemoc,76
+2020-05-13,Gustavo A. Madero,175
+2020-05-13,Iztacalco,121
+2020-05-13,Iztapalapa,209
+2020-05-13,La Magdalena Contreras,45
+2020-05-13,Miguel Hidalgo,52
+2020-05-13,Milpa Alta,38
+2020-05-13,Tlalpan,86
+2020-05-13,Tlahuac,56
+2020-05-13,Venustiano Carranza,87
+2020-05-13,Xochimilco,84
+2020-05-13,Alvaro Obregon,70
+2020-05-14,Azcapotzalco,154
+2020-05-14,Benito Juarez,62
+2020-05-14,Coyoacan,67
+2020-05-14,Cuajimalpa de Morelos,138
+2020-05-14,Cuauhtemoc,55
+2020-05-14,Gustavo A. Madero,175
+2020-05-14,Iztacalco,119
+2020-05-14,Iztapalapa,191
+2020-05-14,La Magdalena Contreras,62
+2020-05-14,Miguel Hidalgo,38
+2020-05-14,Milpa Alta,26
+2020-05-14,Tlalpan,114
+2020-05-14,Tlahuac,70
+2020-05-14,Venustiano Carranza,74
+2020-05-14,Xochimilco,75
+2020-05-14,Alvaro Obregon,73
+2020-05-15,Azcapotzalco,190
+2020-05-15,Benito Juarez,64
+2020-05-15,Coyoacan,90
+2020-05-15,Cuajimalpa de Morelos,143
+2020-05-15,Cuauhtemoc,75
+2020-05-15,Gustavo A. Madero,172
+2020-05-15,Iztacalco,160
+2020-05-15,Iztapalapa,226
+2020-05-15,La Magdalena Contreras,39
+2020-05-15,Miguel Hidalgo,43
+2020-05-15,Milpa Alta,41
+2020-05-15,Tlalpan,101
+2020-05-15,Tlahuac,77
+2020-05-15,Venustiano Carranza,114
+2020-05-15,Xochimilco,118
+2020-05-15,Alvaro Obregon,65
+2020-05-16,Azcapotzalco,91
+2020-05-16,Benito Juarez,48
+2020-05-16,Coyoacan,71
+2020-05-16,Cuajimalpa de Morelos,70
+2020-05-16,Cuauhtemoc,48
+2020-05-16,Gustavo A. Madero,80
+2020-05-16,Iztacalco,79
+2020-05-16,Iztapalapa,135
+2020-05-16,La Magdalena Contreras,18
+2020-05-16,Miguel Hidalgo,46
+2020-05-16,Milpa Alta,27
+2020-05-16,Tlalpan,54
+2020-05-16,Tlahuac,46
+2020-05-16,Venustiano Carranza,55
+2020-05-16,Xochimilco,82
+2020-05-16,Alvaro Obregon,44
+2020-05-17,Azcapotzalco,71
+2020-05-17,Benito Juarez,38
+2020-05-17,Coyoacan,33
+2020-05-17,Cuajimalpa de Morelos,80
+2020-05-17,Cuauhtemoc,39
+2020-05-17,Gustavo A. Madero,72
+2020-05-17,Iztacalco,67
+2020-05-17,Iztapalapa,81
+2020-05-17,La Magdalena Contreras,14
+2020-05-17,Miguel Hidalgo,30
+2020-05-17,Milpa Alta,19
+2020-05-17,Tlalpan,50
+2020-05-17,Tlahuac,40
+2020-05-17,Venustiano Carranza,41
+2020-05-17,Xochimilco,55
+2020-05-17,Alvaro Obregon,39
+2020-05-18,Azcapotzalco,243
+2020-05-18,Benito Juarez,77
+2020-05-18,Coyoacan,111
+2020-05-18,Cuajimalpa de Morelos,147
+2020-05-18,Cuauhtemoc,88
+2020-05-18,Gustavo A. Madero,216
+2020-05-18,Iztacalco,150
+2020-05-18,Iztapalapa,259
+2020-05-18,La Magdalena Contreras,48
+2020-05-18,Miguel Hidalgo,68
+2020-05-18,Milpa Alta,48
+2020-05-18,Tlalpan,121
+2020-05-18,Tlahuac,84
+2020-05-18,Venustiano Carranza,103
+2020-05-18,Xochimilco,121
+2020-05-18,Alvaro Obregon,95
+2020-05-19,Azcapotzalco,201
+2020-05-19,Benito Juarez,89
+2020-05-19,Coyoacan,98
+2020-05-19,Cuajimalpa de Morelos,139
+2020-05-19,Cuauhtemoc,70
+2020-05-19,Gustavo A. Madero,208
+2020-05-19,Iztacalco,138
+2020-05-19,Iztapalapa,254
+2020-05-19,La Magdalena Contreras,42
+2020-05-19,Miguel Hidalgo,64
+2020-05-19,Milpa Alta,67
+2020-05-19,Tlalpan,107
+2020-05-19,Tlahuac,76
+2020-05-19,Venustiano Carranza,113
+2020-05-19,Xochimilco,100
+2020-05-19,Alvaro Obregon,88
+2020-05-20,Azcapotzalco,230
+2020-05-20,Benito Juarez,69
+2020-05-20,Coyoacan,97
+2020-05-20,Cuajimalpa de Morelos,162
+2020-05-20,Cuauhtemoc,97
+2020-05-20,Gustavo A. Madero,224
+2020-05-20,Iztacalco,134
+2020-05-20,Iztapalapa,256
+2020-05-20,La Magdalena Contreras,40
+2020-05-20,Miguel Hidalgo,61
+2020-05-20,Milpa Alta,66
+2020-05-20,Tlalpan,114
+2020-05-20,Tlahuac,91
+2020-05-20,Venustiano Carranza,104
+2020-05-20,Xochimilco,106
+2020-05-20,Alvaro Obregon,82
+2020-05-21,Azcapotzalco,273
+2020-05-21,Benito Juarez,60
+2020-05-21,Coyoacan,88
+2020-05-21,Cuajimalpa de Morelos,145
+2020-05-21,Cuauhtemoc,61
+2020-05-21,Gustavo A. Madero,182
+2020-05-21,Iztacalco,136
+2020-05-21,Iztapalapa,235
+2020-05-21,La Magdalena Contreras,63
+2020-05-21,Miguel Hidalgo,54
+2020-05-21,Milpa Alta,66
+2020-05-21,Tlalpan,100
+2020-05-21,Tlahuac,100
+2020-05-21,Venustiano Carranza,105
+2020-05-21,Xochimilco,101
+2020-05-21,Alvaro Obregon,88
+2020-05-22,Azcapotzalco,230
+2020-05-22,Benito Juarez,83
+2020-05-22,Coyoacan,104
+2020-05-22,Cuajimalpa de Morelos,139
+2020-05-22,Cuauhtemoc,102
+2020-05-22,Gustavo A. Madero,167
+2020-05-22,Iztacalco,151
+2020-05-22,Iztapalapa,211
+2020-05-22,La Magdalena Contreras,36
+2020-05-22,Miguel Hidalgo,55
+2020-05-22,Milpa Alta,50
+2020-05-22,Tlalpan,123
+2020-05-22,Tlahuac,69
+2020-05-22,Venustiano Carranza,101
+2020-05-22,Xochimilco,135
+2020-05-22,Alvaro Obregon,70
+2020-05-23,Azcapotzalco,89
+2020-05-23,Benito Juarez,53
+2020-05-23,Coyoacan,53
+2020-05-23,Cuajimalpa de Morelos,72
+2020-05-23,Cuauhtemoc,36
+2020-05-23,Gustavo A. Madero,88
+2020-05-23,Iztacalco,75
+2020-05-23,Iztapalapa,121
+2020-05-23,La Magdalena Contreras,28
+2020-05-23,Miguel Hidalgo,34
+2020-05-23,Milpa Alta,38
+2020-05-23,Tlalpan,47
+2020-05-23,Tlahuac,46
+2020-05-23,Venustiano Carranza,53
+2020-05-23,Xochimilco,55
+2020-05-23,Alvaro Obregon,68
+2020-05-24,Azcapotzalco,106
+2020-05-24,Benito Juarez,38
+2020-05-24,Coyoacan,46
+2020-05-24,Cuajimalpa de Morelos,75
+2020-05-24,Cuauhtemoc,38
+2020-05-24,Gustavo A. Madero,87
+2020-05-24,Iztacalco,72
+2020-05-24,Iztapalapa,94
+2020-05-24,La Magdalena Contreras,9
+2020-05-24,Miguel Hidalgo,26
+2020-05-24,Milpa Alta,17
+2020-05-24,Tlalpan,64
+2020-05-24,Tlahuac,20
+2020-05-24,Venustiano Carranza,31
+2020-05-24,Xochimilco,53
+2020-05-24,Alvaro Obregon,42
+2020-05-25,Azcapotzalco,204
+2020-05-25,Benito Juarez,85
+2020-05-25,Coyoacan,121
+2020-05-25,Cuajimalpa de Morelos,154
+2020-05-25,Cuauhtemoc,106
+2020-05-25,Gustavo A. Madero,218
+2020-05-25,Iztacalco,133
+2020-05-25,Iztapalapa,215
+2020-05-25,La Magdalena Contreras,55
+2020-05-25,Miguel Hidalgo,72
+2020-05-25,Milpa Alta,73
+2020-05-25,Tlalpan,147
+2020-05-25,Tlahuac,99
+2020-05-25,Venustiano Carranza,114
+2020-05-25,Xochimilco,127
+2020-05-25,Alvaro Obregon,115
+2020-05-26,Azcapotzalco,199
+2020-05-26,Benito Juarez,80
+2020-05-26,Coyoacan,125
+2020-05-26,Cuajimalpa de Morelos,180
+2020-05-26,Cuauhtemoc,82
+2020-05-26,Gustavo A. Madero,190
+2020-05-26,Iztacalco,162
+2020-05-26,Iztapalapa,217
+2020-05-26,La Magdalena Contreras,51
+2020-05-26,Miguel Hidalgo,54
+2020-05-26,Milpa Alta,68
+2020-05-26,Tlalpan,158
+2020-05-26,Tlahuac,91
+2020-05-26,Venustiano Carranza,112
+2020-05-26,Xochimilco,112
+2020-05-26,Alvaro Obregon,102
+2020-05-27,Azcapotzalco,227
+2020-05-27,Benito Juarez,86
+2020-05-27,Coyoacan,113
+2020-05-27,Cuajimalpa de Morelos,199
+2020-05-27,Cuauhtemoc,73
+2020-05-27,Gustavo A. Madero,187
+2020-05-27,Iztacalco,127
+2020-05-27,Iztapalapa,211
+2020-05-27,La Magdalena Contreras,59
+2020-05-27,Miguel Hidalgo,49
+2020-05-27,Milpa Alta,64
+2020-05-27,Tlalpan,167
+2020-05-27,Tlahuac,113
+2020-05-27,Venustiano Carranza,135
+2020-05-27,Xochimilco,131
+2020-05-27,Alvaro Obregon,87
+2020-05-28,Azcapotzalco,195
+2020-05-28,Benito Juarez,64
+2020-05-28,Coyoacan,104
+2020-05-28,Cuajimalpa de Morelos,176
+2020-05-28,Cuauhtemoc,101
+2020-05-28,Gustavo A. Madero,188
+2020-05-28,Iztacalco,130
+2020-05-28,Iztapalapa,189
+2020-05-28,La Magdalena Contreras,60
+2020-05-28,Miguel Hidalgo,46
+2020-05-28,Milpa Alta,54
+2020-05-28,Tlalpan,142
+2020-05-28,Tlahuac,78
+2020-05-28,Venustiano Carranza,100
+2020-05-28,Xochimilco,102
+2020-05-28,Alvaro Obregon,104
+2020-05-29,Azcapotzalco,192
+2020-05-29,Benito Juarez,77
+2020-05-29,Coyoacan,105
+2020-05-29,Cuajimalpa de Morelos,143
+2020-05-29,Cuauhtemoc,93
+2020-05-29,Gustavo A. Madero,186
+2020-05-29,Iztacalco,134
+2020-05-29,Iztapalapa,212
+2020-05-29,La Magdalena Contreras,36
+2020-05-29,Miguel Hidalgo,62
+2020-05-29,Milpa Alta,59
+2020-05-29,Tlalpan,141
+2020-05-29,Tlahuac,67
+2020-05-29,Venustiano Carranza,122
+2020-05-29,Xochimilco,132
+2020-05-29,Alvaro Obregon,112
+2020-05-30,Azcapotzalco,125
+2020-05-30,Benito Juarez,53
+2020-05-30,Coyoacan,58
+2020-05-30,Cuajimalpa de Morelos,111
+2020-05-30,Cuauhtemoc,36
+2020-05-30,Gustavo A. Madero,107
+2020-05-30,Iztacalco,109
+2020-05-30,Iztapalapa,134
+2020-05-30,La Magdalena Contreras,28
+2020-05-30,Miguel Hidalgo,45
+2020-05-30,Milpa Alta,34
+2020-05-30,Tlalpan,65
+2020-05-30,Tlahuac,79
+2020-05-30,Venustiano Carranza,66
+2020-05-30,Xochimilco,62
+2020-05-30,Alvaro Obregon,67
+2020-05-31,Azcapotzalco,97
+2020-05-31,Benito Juarez,40
+2020-05-31,Coyoacan,32
+2020-05-31,Cuajimalpa de Morelos,87
+2020-05-31,Cuauhtemoc,46
+2020-05-31,Gustavo A. Madero,76
+2020-05-31,Iztacalco,64
+2020-05-31,Iztapalapa,125
+2020-05-31,La Magdalena Contreras,14
+2020-05-31,Miguel Hidalgo,19
+2020-05-31,Milpa Alta,39
+2020-05-31,Tlalpan,51
+2020-05-31,Tlahuac,44
+2020-05-31,Venustiano Carranza,41
+2020-05-31,Xochimilco,54
+2020-05-31,Alvaro Obregon,43
+2020-06-01,Azcapotzalco,247
+2020-06-01,Benito Juarez,94
+2020-06-01,Coyoacan,124
+2020-06-01,Cuajimalpa de Morelos,172
+2020-06-01,Cuauhtemoc,136
+2020-06-01,Gustavo A. Madero,238
+2020-06-01,Iztacalco,180
+2020-06-01,Iztapalapa,263
+2020-06-01,La Magdalena Contreras,61
+2020-06-01,Miguel Hidalgo,50
+2020-06-01,Milpa Alta,101
+2020-06-01,Tlalpan,127
+2020-06-01,Tlahuac,102
+2020-06-01,Venustiano Carranza,114
+2020-06-01,Xochimilco,154
+2020-06-01,Alvaro Obregon,115
+2020-06-02,Azcapotzalco,244
+2020-06-02,Benito Juarez,74
+2020-06-02,Coyoacan,109
+2020-06-02,Cuajimalpa de Morelos,159
+2020-06-02,Cuauhtemoc,98
+2020-06-02,Gustavo A. Madero,234
+2020-06-02,Iztacalco,124
+2020-06-02,Iztapalapa,233
+2020-06-02,La Magdalena Contreras,48
+2020-06-02,Miguel Hidalgo,50
+2020-06-02,Milpa Alta,84
+2020-06-02,Tlalpan,118
+2020-06-02,Tlahuac,87
+2020-06-02,Venustiano Carranza,138
+2020-06-02,Xochimilco,102
+2020-06-02,Alvaro Obregon,114
+2020-06-03,Azcapotzalco,220
+2020-06-03,Benito Juarez,75
+2020-06-03,Coyoacan,101
+2020-06-03,Cuajimalpa de Morelos,136
+2020-06-03,Cuauhtemoc,90
+2020-06-03,Gustavo A. Madero,245
+2020-06-03,Iztacalco,167
+2020-06-03,Iztapalapa,214
+2020-06-03,La Magdalena Contreras,50
+2020-06-03,Miguel Hidalgo,71
+2020-06-03,Milpa Alta,69
+2020-06-03,Tlalpan,143
+2020-06-03,Tlahuac,137
+2020-06-03,Venustiano Carranza,101
+2020-06-03,Xochimilco,110
+2020-06-03,Alvaro Obregon,111
+2020-06-04,Azcapotzalco,264
+2020-06-04,Benito Juarez,82
+2020-06-04,Coyoacan,111
+2020-06-04,Cuajimalpa de Morelos,147
+2020-06-04,Cuauhtemoc,82
+2020-06-04,Gustavo A. Madero,208
+2020-06-04,Iztacalco,150
+2020-06-04,Iztapalapa,226
+2020-06-04,La Magdalena Contreras,58
+2020-06-04,Miguel Hidalgo,46
+2020-06-04,Milpa Alta,54
+2020-06-04,Tlalpan,132
+2020-06-04,Tlahuac,109
+2020-06-04,Venustiano Carranza,122
+2020-06-04,Xochimilco,148
+2020-06-04,Alvaro Obregon,112
+2020-06-05,Azcapotzalco,238
+2020-06-05,Benito Juarez,90
+2020-06-05,Coyoacan,135
+2020-06-05,Cuajimalpa de Morelos,168
+2020-06-05,Cuauhtemoc,93
+2020-06-05,Gustavo A. Madero,208
+2020-06-05,Iztacalco,151
+2020-06-05,Iztapalapa,234
+2020-06-05,La Magdalena Contreras,41
+2020-06-05,Miguel Hidalgo,62
+2020-06-05,Milpa Alta,80
+2020-06-05,Tlalpan,165
+2020-06-05,Tlahuac,151
+2020-06-05,Venustiano Carranza,132
+2020-06-05,Xochimilco,132
+2020-06-05,Alvaro Obregon,85
+2020-06-06,Azcapotzalco,136
+2020-06-06,Benito Juarez,43
+2020-06-06,Coyoacan,91
+2020-06-06,Cuajimalpa de Morelos,115
+2020-06-06,Cuauhtemoc,41
+2020-06-06,Gustavo A. Madero,88
+2020-06-06,Iztacalco,119
+2020-06-06,Iztapalapa,124
+2020-06-06,La Magdalena Contreras,28
+2020-06-06,Miguel Hidalgo,35
+2020-06-06,Milpa Alta,33
+2020-06-06,Tlalpan,84
+2020-06-06,Tlahuac,85
+2020-06-06,Venustiano Carranza,63
+2020-06-06,Xochimilco,101
+2020-06-06,Alvaro Obregon,79
+2020-06-07,Azcapotzalco,102
+2020-06-07,Benito Juarez,51
+2020-06-07,Coyoacan,38
+2020-06-07,Cuajimalpa de Morelos,120
+2020-06-07,Cuauhtemoc,33
+2020-06-07,Gustavo A. Madero,86
+2020-06-07,Iztacalco,72
+2020-06-07,Iztapalapa,107
+2020-06-07,La Magdalena Contreras,18
+2020-06-07,Miguel Hidalgo,34
+2020-06-07,Milpa Alta,53
+2020-06-07,Tlalpan,59
+2020-06-07,Tlahuac,40
+2020-06-07,Venustiano Carranza,54
+2020-06-07,Xochimilco,62
+2020-06-07,Alvaro Obregon,56
+2020-06-08,Azcapotzalco,279
+2020-06-08,Benito Juarez,99
+2020-06-08,Coyoacan,155
+2020-06-08,Cuajimalpa de Morelos,209
+2020-06-08,Cuauhtemoc,117
+2020-06-08,Gustavo A. Madero,219
+2020-06-08,Iztacalco,191
+2020-06-08,Iztapalapa,245
+2020-06-08,La Magdalena Contreras,67
+2020-06-08,Miguel Hidalgo,58
+2020-06-08,Milpa Alta,110
+2020-06-08,Tlalpan,193
+2020-06-08,Tlahuac,105
+2020-06-08,Venustiano Carranza,134
+2020-06-08,Xochimilco,159
+2020-06-08,Alvaro Obregon,119
+2020-06-09,Azcapotzalco,272
+2020-06-09,Benito Juarez,77
+2020-06-09,Coyoacan,134
+2020-06-09,Cuajimalpa de Morelos,218
+2020-06-09,Cuauhtemoc,143
+2020-06-09,Gustavo A. Madero,245
+2020-06-09,Iztacalco,168
+2020-06-09,Iztapalapa,216
+2020-06-09,La Magdalena Contreras,58
+2020-06-09,Miguel Hidalgo,74
+2020-06-09,Milpa Alta,98
+2020-06-09,Tlalpan,162
+2020-06-09,Tlahuac,125
+2020-06-09,Venustiano Carranza,172
+2020-06-09,Xochimilco,148
+2020-06-09,Alvaro Obregon,140
+2020-06-10,Azcapotzalco,299
+2020-06-10,Benito Juarez,90
+2020-06-10,Coyoacan,162
+2020-06-10,Cuajimalpa de Morelos,241
+2020-06-10,Cuauhtemoc,101
+2020-06-10,Gustavo A. Madero,221
+2020-06-10,Iztacalco,161
+2020-06-10,Iztapalapa,235
+2020-06-10,La Magdalena Contreras,58
+2020-06-10,Miguel Hidalgo,81
+2020-06-10,Milpa Alta,97
+2020-06-10,Tlalpan,169
+2020-06-10,Tlahuac,122
+2020-06-10,Venustiano Carranza,160
+2020-06-10,Xochimilco,143
+2020-06-10,Alvaro Obregon,119
+2020-06-11,Azcapotzalco,265
+2020-06-11,Benito Juarez,83
+2020-06-11,Coyoacan,135
+2020-06-11,Cuajimalpa de Morelos,205
+2020-06-11,Cuauhtemoc,79
+2020-06-11,Gustavo A. Madero,253
+2020-06-11,Iztacalco,174
+2020-06-11,Iztapalapa,209
+2020-06-11,La Magdalena Contreras,56
+2020-06-11,Miguel Hidalgo,61
+2020-06-11,Milpa Alta,86
+2020-06-11,Tlalpan,170
+2020-06-11,Tlahuac,117
+2020-06-11,Venustiano Carranza,152
+2020-06-11,Xochimilco,112
+2020-06-11,Alvaro Obregon,121
+2020-06-12,Azcapotzalco,222
+2020-06-12,Benito Juarez,105
+2020-06-12,Coyoacan,127
+2020-06-12,Cuajimalpa de Morelos,240
+2020-06-12,Cuauhtemoc,111
+2020-06-12,Gustavo A. Madero,253
+2020-06-12,Iztacalco,195
+2020-06-12,Iztapalapa,244
+2020-06-12,La Magdalena Contreras,69
+2020-06-12,Miguel Hidalgo,55
+2020-06-12,Milpa Alta,93
+2020-06-12,Tlalpan,158
+2020-06-12,Tlahuac,171
+2020-06-12,Venustiano Carranza,159
+2020-06-12,Xochimilco,149
+2020-06-12,Alvaro Obregon,146
+2020-06-13,Azcapotzalco,128
+2020-06-13,Benito Juarez,45
+2020-06-13,Coyoacan,60
+2020-06-13,Cuajimalpa de Morelos,136
+2020-06-13,Cuauhtemoc,32
+2020-06-13,Gustavo A. Madero,90
+2020-06-13,Iztacalco,101
+2020-06-13,Iztapalapa,116
+2020-06-13,La Magdalena Contreras,23
+2020-06-13,Miguel Hidalgo,37
+2020-06-13,Milpa Alta,51
+2020-06-13,Tlalpan,78
+2020-06-13,Tlahuac,46
+2020-06-13,Venustiano Carranza,71
+2020-06-13,Xochimilco,81
+2020-06-13,Alvaro Obregon,72
+2020-06-14,Azcapotzalco,124
+2020-06-14,Benito Juarez,43
+2020-06-14,Coyoacan,47
+2020-06-14,Cuajimalpa de Morelos,107
+2020-06-14,Cuauhtemoc,38
+2020-06-14,Gustavo A. Madero,77
+2020-06-14,Iztacalco,64
+2020-06-14,Iztapalapa,95
+2020-06-14,La Magdalena Contreras,40
+2020-06-14,Miguel Hidalgo,32
+2020-06-14,Milpa Alta,62
+2020-06-14,Tlalpan,43
+2020-06-14,Tlahuac,60
+2020-06-14,Venustiano Carranza,62
+2020-06-14,Xochimilco,63
+2020-06-14,Alvaro Obregon,47
+2020-06-15,Azcapotzalco,285
+2020-06-15,Benito Juarez,123
+2020-06-15,Coyoacan,196
+2020-06-15,Cuajimalpa de Morelos,265
+2020-06-15,Cuauhtemoc,101
+2020-06-15,Gustavo A. Madero,250
+2020-06-15,Iztacalco,192
+2020-06-15,Iztapalapa,238
+2020-06-15,La Magdalena Contreras,91
+2020-06-15,Miguel Hidalgo,87
+2020-06-15,Milpa Alta,75
+2020-06-15,Tlalpan,154
+2020-06-15,Tlahuac,131
+2020-06-15,Venustiano Carranza,143
+2020-06-15,Xochimilco,121
+2020-06-15,Alvaro Obregon,138
+2020-06-16,Azcapotzalco,301
+2020-06-16,Benito Juarez,105
+2020-06-16,Coyoacan,144
+2020-06-16,Cuajimalpa de Morelos,227
+2020-06-16,Cuauhtemoc,104
+2020-06-16,Gustavo A. Madero,232
+2020-06-16,Iztacalco,181
+2020-06-16,Iztapalapa,317
+2020-06-16,La Magdalena Contreras,68
+2020-06-16,Miguel Hidalgo,77
+2020-06-16,Milpa Alta,104
+2020-06-16,Tlalpan,170
+2020-06-16,Tlahuac,147
+2020-06-16,Venustiano Carranza,176
+2020-06-16,Xochimilco,119
+2020-06-16,Alvaro Obregon,149
+2020-06-17,Azcapotzalco,307
+2020-06-17,Benito Juarez,97
+2020-06-17,Coyoacan,145
+2020-06-17,Cuajimalpa de Morelos,252
+2020-06-17,Cuauhtemoc,99
+2020-06-17,Gustavo A. Madero,197
+2020-06-17,Iztacalco,207
+2020-06-17,Iztapalapa,241
+2020-06-17,La Magdalena Contreras,70
+2020-06-17,Miguel Hidalgo,65
+2020-06-17,Milpa Alta,104
+2020-06-17,Tlalpan,187
+2020-06-17,Tlahuac,115
+2020-06-17,Venustiano Carranza,106
+2020-06-17,Xochimilco,142
+2020-06-17,Alvaro Obregon,124
+2020-06-18,Azcapotzalco,308
+2020-06-18,Benito Juarez,137
+2020-06-18,Coyoacan,185
+2020-06-18,Cuajimalpa de Morelos,222
+2020-06-18,Cuauhtemoc,108
+2020-06-18,Gustavo A. Madero,189
+2020-06-18,Iztacalco,177
+2020-06-18,Iztapalapa,295
+2020-06-18,La Magdalena Contreras,59
+2020-06-18,Miguel Hidalgo,75
+2020-06-18,Milpa Alta,98
+2020-06-18,Tlalpan,175
+2020-06-18,Tlahuac,163
+2020-06-18,Venustiano Carranza,173
+2020-06-18,Xochimilco,118
+2020-06-18,Alvaro Obregon,125
+2020-06-19,Azcapotzalco,304
+2020-06-19,Benito Juarez,86
+2020-06-19,Coyoacan,157
+2020-06-19,Cuajimalpa de Morelos,275
+2020-06-19,Cuauhtemoc,77
+2020-06-19,Gustavo A. Madero,186
+2020-06-19,Iztacalco,191
+2020-06-19,Iztapalapa,265
+2020-06-19,La Magdalena Contreras,95
+2020-06-19,Miguel Hidalgo,65
+2020-06-19,Milpa Alta,123
+2020-06-19,Tlalpan,215
+2020-06-19,Tlahuac,143
+2020-06-19,Venustiano Carranza,173
+2020-06-19,Xochimilco,110
+2020-06-19,Alvaro Obregon,117
+2020-06-20,Azcapotzalco,189
+2020-06-20,Benito Juarez,44
+2020-06-20,Coyoacan,86
+2020-06-20,Cuajimalpa de Morelos,162
+2020-06-20,Cuauhtemoc,49
+2020-06-20,Gustavo A. Madero,87
+2020-06-20,Iztacalco,148
+2020-06-20,Iztapalapa,115
+2020-06-20,La Magdalena Contreras,40
+2020-06-20,Miguel Hidalgo,47
+2020-06-20,Milpa Alta,70
+2020-06-20,Tlalpan,71
+2020-06-20,Tlahuac,98
+2020-06-20,Venustiano Carranza,103
+2020-06-20,Xochimilco,118
+2020-06-20,Alvaro Obregon,70
+2020-06-21,Azcapotzalco,105
+2020-06-21,Benito Juarez,45
+2020-06-21,Coyoacan,50
+2020-06-21,Cuajimalpa de Morelos,151
+2020-06-21,Cuauhtemoc,35
+2020-06-21,Gustavo A. Madero,85
+2020-06-21,Iztacalco,100
+2020-06-21,Iztapalapa,87
+2020-06-21,La Magdalena Contreras,31
+2020-06-21,Miguel Hidalgo,29
+2020-06-21,Milpa Alta,48
+2020-06-21,Tlalpan,84
+2020-06-21,Tlahuac,93
+2020-06-21,Venustiano Carranza,65
+2020-06-21,Xochimilco,85
+2020-06-21,Alvaro Obregon,56
+2020-06-22,Azcapotzalco,385
+2020-06-22,Benito Juarez,151
+2020-06-22,Coyoacan,225
+2020-06-22,Cuajimalpa de Morelos,416
+2020-06-22,Cuauhtemoc,153
+2020-06-22,Gustavo A. Madero,259
+2020-06-22,Iztacalco,289
+2020-06-22,Iztapalapa,409
+2020-06-22,La Magdalena Contreras,136
+2020-06-22,Miguel Hidalgo,91
+2020-06-22,Milpa Alta,146
+2020-06-22,Tlalpan,221
+2020-06-22,Tlahuac,231
+2020-06-22,Venustiano Carranza,291
+2020-06-22,Xochimilco,223
+2020-06-22,Alvaro Obregon,195
+2020-06-23,Azcapotzalco,430
+2020-06-23,Benito Juarez,174
+2020-06-23,Coyoacan,241
+2020-06-23,Cuajimalpa de Morelos,400
+2020-06-23,Cuauhtemoc,160
+2020-06-23,Gustavo A. Madero,403
+2020-06-23,Iztacalco,296
+2020-06-23,Iztapalapa,584
+2020-06-23,La Magdalena Contreras,193
+2020-06-23,Miguel Hidalgo,82
+2020-06-23,Milpa Alta,179
+2020-06-23,Tlalpan,273
+2020-06-23,Tlahuac,211
+2020-06-23,Venustiano Carranza,356
+2020-06-23,Xochimilco,233
+2020-06-23,Alvaro Obregon,270
+2020-06-24,Azcapotzalco,173
+2020-06-24,Benito Juarez,52
+2020-06-24,Coyoacan,129
+2020-06-24,Cuajimalpa de Morelos,124
+2020-06-24,Cuauhtemoc,80
+2020-06-24,Gustavo A. Madero,212
+2020-06-24,Iztacalco,149
+2020-06-24,Iztapalapa,276
+2020-06-24,La Magdalena Contreras,87
+2020-06-24,Miguel Hidalgo,51
+2020-06-24,Milpa Alta,75
+2020-06-24,Tlalpan,147
+2020-06-24,Tlahuac,111
+2020-06-24,Venustiano Carranza,121
+2020-06-24,Xochimilco,146
+2020-06-24,Alvaro Obregon,125
