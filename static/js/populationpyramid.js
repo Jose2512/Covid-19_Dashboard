@@ -47,15 +47,7 @@ function pyramidBuilder(data, target, options) {
 
     var styleSection = d3.select(target).append('style')
     .text('svg {max-width:100%} \
-    .axis line,axis path {shape-rendering: crispEdges;fill: transparent;stroke: #555;} \
-    .axis text {font-size: 11px;} \
-    .bar {fill-opacity: 0.5;} \
-    .bar.left {fill: ' + style.leftBarColor + ';} \
-    .bar.left:hover {fill: ' + colorTransform(style.leftBarColor, '333333') + ';} \
-    .bar.right {fill: ' + style.rightBarColor + ';} \
-    .bar.right:hover {fill: ' + colorTransform(style.rightBarColor, '333333') + ';} \
-    .tooltip {position: absolute;line-height: 1.1em;padding: 7px; margin: 3px;background: ' + style.tooltipBG + '; color: ' + style.tooltipColor + '; pointer-events: none;border-radius: 6px;}')
-
+    .axis line,axis path {shape-rendering: crispEdges;fill: transparent;stroke: #555;} ' )
     var region = d3.select(target).append('svg')
         .attr('width', w_full)
         .attr('height', h_full)
@@ -197,13 +189,14 @@ function pyramidBuilder(data, target, options) {
         .attr('y', function(d) {
             return yScale(d.age) + margin.middle / 4;
         })
+        .attr('rx', "2px")
         .attr('width', function(d) {
             return xScale(percentage(d.male));
         })
         .attr('height', (yScale.range()[0] / data.length) - margin.middle / 2)
         .on("mouseover", function(d) {
             tooltipDiv.transition()
-                .duration(200)
+                .duration(500)
                 .style("opacity", 0.9);
             tooltipDiv.html("<strong>Edad Hombres " + d.age + "</strong>" +
                     "<br />  Población: " + prettyFormat(d.male) +
@@ -225,13 +218,14 @@ function pyramidBuilder(data, target, options) {
         .attr('y', function(d) {
             return yScale(d.age) + margin.middle / 4;
         })
+        .attr('rx', "2px")
         .attr('width', function(d) {
             return xScale(percentage(d.female));
         })
         .attr('height', (yScale.range()[0] / data.length) - margin.middle / 2)
         .on("mouseover", function(d) {
             tooltipDiv.transition()
-                .duration(200)
+                .duration(500)
                 .style("opacity", 0.9);
             tooltipDiv.html("<strong> Edad Mujeres " + d.age + "</strong>" +
                     "<br />  Población: " + prettyFormat(d.female) +
@@ -257,32 +251,15 @@ function pyramidBuilder(data, target, options) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    // lighten colors
-    function colorTransform(c1, c2) {
-        var c1 = c1.replace('#','')
-            origHex = {
-                r: c1.substring(0, 2),
-                g: c1.substring(2, 4),
-                b: c1.substring(4, 6)
-            },
-            transVec = {
-                r: c2.substring(0, 2),
-                g: c2.substring(2, 4),
-                b: c2.substring(4, 6)
-            },
-            newHex = {};
-
-        function transform(d, e) {
-            var f = parseInt(d, 16) + parseInt(e, 16);
-            if (f > 255) {
-                f = 255;
-            }
-            return f.toString(16);
-        }
-        newHex.r = transform(origHex.r, transVec.r);
-        newHex.g = transform(origHex.g, transVec.g);
-        newHex.b = transform(origHex.b, transVec.b);
-        return '#' + newHex.r + newHex.g + newHex.b;
-    }
 
 }
+
+// data must be in a format with age, male, and female in each object
+var exampleData = d3.json("/cases_gender").then(function(data){
+    pyramidBuilder(data, '#charMW', {height: 400, width: 600});
+})
+
+var exampleData = d3.json("/deaths_gender").then(function(data){
+    pyramidBuilder(data, '#charMW_dec', {height: 400, width: 600});
+})  
+
