@@ -111,3 +111,22 @@ body{
 }
 
 /* OTHER STUFF */
+
+/* OTHER STUFF */
+.line {
+    fill: none;
+    stroke-width: 2px;
+    transition: 0.25s;
+}
+
+.orange {
+    stroke: orange;
+}
+
+.green {
+  stroke: green;
+}
+
+.blue {
+    stroke: rgb(14, 7, 80);
+} 
