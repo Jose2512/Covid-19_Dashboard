@@ -92,6 +92,12 @@ body{
     display: block;
 }
 
+.svg_line{
+    align-self: center;
+    margin: auto;
+    display: block;
+}
+
 /* -----DISEASES STUFF----- */
 #Bubblechart{
 

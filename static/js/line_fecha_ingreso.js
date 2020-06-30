@@ -7,7 +7,7 @@ function initt() {
 
 // Step 1: Set up our chart
 //= ================================
-var svgWidth = 800;
+var svgWidth = 1000;
 var svgHeight = 400;
 
 var margin = {
@@ -26,9 +26,9 @@ var height = svgHeight - margin.top - margin.bottom;
 // =================================
 
 var svg = d3.select("#mainLinechart").append("svg")
-
   .attr("width", svgWidth)
-  .attr("height", svgHeight);
+  .attr("height", svgHeight)
+  .attr('class','svg_line');
 
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
