@@ -28,7 +28,8 @@ var height = svgHeight - margin.top - margin.bottom;
 var svg = d3.select("#mainLinechart").append("svg")
 
   .attr("width", svgWidth)
-  .attr("height", svgHeight);
+  .attr("height", svgHeight)
+  .attr("class", "svg_line");
 
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
@@ -36,7 +37,7 @@ var chartGroup = svg.append("g")
 // Step 3:
 // Import data from the donuts.csv file
 // =================================
-d3.csv("../assets/data/casos_fecha_ingreso2.csv").then(function(covdata) {
+d3.csv("../static/data/casos_fecha_ingreso2.csv").then(function(covdata) {
   // Step 4: Parse the data
   // Format the data and convert to numerical and date values
   // =================================
