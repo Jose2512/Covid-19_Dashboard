@@ -2,20 +2,20 @@ import pandas as pd
 import numpy as np
 import pymongo
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+myclient = pymongo.MongoClient("mongodb+srv://teamcovid:projecttwo@cluster0-pkkni.mongodb.net/Covid_DB?retryWrites=true&w=majority")
 
 #DATABASE
 covid = myclient.Covid_DB
 
-file_to_load = "../Resources/casos-asociados-a-covid-19.csv"
+file_to_load = "../../Resources/casos-asociados-a-covid-19.csv"
 
 covid_cases_data = pd.read_csv(file_to_load)
 
-file_to_load = "../Resources/capacidad-hospitalaria.csv"
+file_to_load = "../../Resources/capacidad-hospitalaria.csv"
 
 capacidad_hospitalaria = pd.read_csv(file_to_load)
 
-file_to_load = "../Resources/afluencia-preliminar-en-transporte-publico.csv"
+file_to_load = "../../Resources/afluencia-preliminar-en-transporte-publico.csv"
 
 daily_transport_data = pd.read_csv(file_to_load)
 
