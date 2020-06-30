@@ -22,74 +22,40 @@ def maps():
 def diseases():
     return render_template("diseases.html")
 
+# DATA CALLS
 @app.route("/deaths_gender")
 def cases_gender():
-    gender = mongo.db.gender.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
+    return convjson(mongo.db.genero_difuntos.find())
 
 @app.route("/cases_gender")
 def deaths_gender():
-    gender = mongo.db.cases_MF.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
+    return convjson(mongo.db.genero_casos.find())
 
 @app.route("/hosp_cap")
 def hosp_cap():
-    gender = mongo.db.cases_MF.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
+    return convjson(mongo.db.capacidad_hospitalaria.find())
 
 @app.route("/case_date")
 def case_date():
-    gender = mongo.db.cases_MF.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
+    return convjson(mongo.db.casos_fecha_ingreso.find())
 
 @app.route("/case_del_date")
 def case_del_date():
-    gender = mongo.db.cases_MF.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
-
-@app.route("/case_del")
-def case_del():
-    gender = mongo.db.cases_MF.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
+    return convjson(mongo.db.casos_delegacion_fecha.find())
 
 @app.route("/case_afluencia")
 def case_afluencia():
-    gender = mongo.db.cases_MF.find()
-    json_projects = []
-    for element in gender:
-        json_projects.append(element)
-    json_projects = json.dumps(json_projects, default=json_util.default)
-    return json_projects
+    return convjson(mongo.db.casos_vs_afluencia_diaria.find())
 
 @app.route("/diseases_count")
 def diseases_count():
-    gender = mongo.db.cases_MF.find()
+    return convjson(mongo.db.enfermedades.find())
+    
+
+def convjson(data):
+    dataset = data
     json_projects = []
-    for element in gender:
+    for element in dataset:
         json_projects.append(element)
     json_projects = json.dumps(json_projects, default=json_util.default)
     return json_projects
