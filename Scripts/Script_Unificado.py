@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import pymongo
 
-
 myclient = pymongo.MongoClient("mongodb+srv://teamcovid:projecttwo@cluster0-pkkni.mongodb.net/Covid_DB?retryWrites=true&w=majority")
 
 #DATABASE
