@@ -1,8 +1,48 @@
 /* ---- MAIN STUFF ---- */
+body{
+    background-color: #f2f2f2;
+}
+
+.bar {
+    fill-opacity: 0.8;
+}
+
+.axis text {
+    font-size: 11px;
+    font-family: monospace;
+}
+
+.tooltip {
+    position: absolute;
+    line-height: 1.1em;
+    padding: 7px; 
+    margin: 3px;
+    background: #fefefe; 
+    color: black; 
+    pointer-events: none;
+    border-radius: 6px;
+}
+
 #mainLinechart{
     height:450px;
     width: 100%;
 
+}
+
+
+.bar.left{
+    fill: #6c9dc6;
+}
+.bar.left:hover {
+    fill: #9fd0f9;
+}
+
+
+.bar.right{
+    fill: #de5454;
+}
+.bar.right:hover {
+    fill: #ff8787;
 }
 
 #charMW{
@@ -18,13 +58,28 @@
     padding: 10px 10px 10px 10px;
 }
 
+#statistics{
+    height:450px;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+
 #heatmaphosp{
-    height:600px;
+    height:800px;
     width: 100%;
 }
 .manualcard{
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    background-color: #ffffff;
+}
+
+.cardtitle{
+    border-bottom: 1px solid #d7d7d7;
+    color: #666;
+    font-size: 14px;
+    font-weight: 200;
+    padding: 7px 10px 4px;
 }
 
 .toppadding{

@@ -64,7 +64,7 @@ var icons = {
     })
 };
 
-d3.csv("../data/capacidad-hospitalaria.csv").then(function(data){
+d3.csv("./static/data/capacidad_hospitalaria.csv").then(function(data){
     
 
     var hospitalCount = {
@@ -95,7 +95,7 @@ d3.csv("../data/capacidad-hospitalaria.csv").then(function(data){
         // Update the station count
         hospitalCount[hospitalStatusCode]++;
         // Create a new marker with the appropriate icon and coordinates
-        var newMarker = L.marker([d.lat, d.lon], {
+        var newMarker = L.marker([d.Lat, d.Lon], {
           icon: icons[hospitalStatusCode]
         });
   

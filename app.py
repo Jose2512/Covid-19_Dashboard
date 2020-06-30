@@ -22,8 +22,8 @@ def maps():
 def diseases():
     return render_template("diseases.html")
 
-@app.route("/genders")
-def genders():
+@app.route("/deaths_gender")
+def cases_gender():
     gender = mongo.db.gender.find()
     json_projects = []
     for element in gender:
@@ -31,8 +31,62 @@ def genders():
     json_projects = json.dumps(json_projects, default=json_util.default)
     return json_projects
 
-@app.route("/cases_MF")
-def cases_MF():
+@app.route("/cases_gender")
+def deaths_gender():
+    gender = mongo.db.cases_MF.find()
+    json_projects = []
+    for element in gender:
+        json_projects.append(element)
+    json_projects = json.dumps(json_projects, default=json_util.default)
+    return json_projects
+
+@app.route("/hosp_cap")
+def hosp_cap():
+    gender = mongo.db.cases_MF.find()
+    json_projects = []
+    for element in gender:
+        json_projects.append(element)
+    json_projects = json.dumps(json_projects, default=json_util.default)
+    return json_projects
+
+@app.route("/case_date")
+def case_date():
+    gender = mongo.db.cases_MF.find()
+    json_projects = []
+    for element in gender:
+        json_projects.append(element)
+    json_projects = json.dumps(json_projects, default=json_util.default)
+    return json_projects
+
+@app.route("/case_del_date")
+def case_del_date():
+    gender = mongo.db.cases_MF.find()
+    json_projects = []
+    for element in gender:
+        json_projects.append(element)
+    json_projects = json.dumps(json_projects, default=json_util.default)
+    return json_projects
+
+@app.route("/case_del")
+def case_del():
+    gender = mongo.db.cases_MF.find()
+    json_projects = []
+    for element in gender:
+        json_projects.append(element)
+    json_projects = json.dumps(json_projects, default=json_util.default)
+    return json_projects
+
+@app.route("/case_afluencia")
+def case_afluencia():
+    gender = mongo.db.cases_MF.find()
+    json_projects = []
+    for element in gender:
+        json_projects.append(element)
+    json_projects = json.dumps(json_projects, default=json_util.default)
+    return json_projects
+
+@app.route("/diseases_count")
+def diseases_count():
     gender = mongo.db.cases_MF.find()
     json_projects = []
     for element in gender:
