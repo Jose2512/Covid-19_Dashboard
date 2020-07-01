@@ -6,8 +6,8 @@ var chartMargin = {
     left: 50
 };
 
-var svgWidth = window.innerWidth; 
-var svgHeight = window.innerHeight;
+var svgWidth = 600; 
+var svgHeight = 600;
 
 
 var chartWidth = svgWidth - chartMargin.left - chartMargin.right
@@ -90,8 +90,7 @@ chartGroup.append("g")
         .call(yAxis);
 
 //Append circles
-chartGroup.append("g")
-        .selectAll("circle")
+chartGroup.selectAll("circle")
         .data(enfermedades)
         .enter()
         .append("circle")
