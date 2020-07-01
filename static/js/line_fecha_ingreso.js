@@ -18,15 +18,16 @@ var svg = d3
   .select("#mainLinechart")
   .append("svg")
   .attr("width", svgWidth)
-  .attr("height", svgHeight);
+  .attr("height", svgHeight)
+  .attr("class", "svg_line");
 
 // Append an SVG group
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Initial Params
-var chosenXAxis = "FECHAINGRESO";
-var chosenYAxis = "CASOSTOTALES";
+var chosenXAxis = "FECHA";
+var chosenYAxis = "CASOS_TOTALES";
 
 // function used for updating x-scale var upon click on axis label
 function xScale(ingData, chosenXAxis) {
@@ -44,10 +45,10 @@ function xScale(ingData, chosenXAxis) {
 //  yLinearScale = yScale(ingData, chosenYAxis);
 
 function yScale(ingData, chosenYAxis) {
-   // var chosenYAxis = "CASOSTOTALES";
+   // var chosenYAxis = "CASOS_TOTALES";
 
 
-   if (chosenYAxis !=="CASOSTOTALES") {
+   if (chosenYAxis !=="CASOS_TOTALES") {
     // create scales
    var yLinearScale = d3.scaleLinear()
      .domain([d3.min(ingData, d => d[chosenYAxis]) * 0.8,
@@ -146,11 +147,11 @@ function updateToolTip(chosenYAxis, circlesGroup) {
   console.log ("update tool",chosenYAxis)
   var label;
 
-  if (chosenYAxis === "CASOSMUJERES") {
-    label = "CASOSMUJERES:";
+  if (chosenYAxis === "CASOS_MUJERES") {
+    label = "CASOS_MUJERES:";
   }
   else {
-    label = "CASOSHOMBRES:";
+    label = "CASOS_HOMBRES:";
   }
 
  
@@ -169,7 +170,7 @@ var toolTip = d3.select("body")
     toolTip.transition()
     .duration(100)
     .style("opacity", 0.9);
-     toolTip.html( `<strong>Fech: ${dateFormatter(d.FECHAINGRESO)}` + `<hr> Pacientes: ${d[chosenYAxis]}`)
+     toolTip.html( `<strong>Fech: ${dateFormatter(d.FECHA)}` + `<hr> Pacientes: ${d[chosenYAxis]}`)
         .style("left", d3.event.pageX + "px")
         .style("top", d3.event.pageY + "px");
   })
@@ -189,17 +190,17 @@ var toolTip = d3.select("body")
 }
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("../assets/data/casos_fecha_ingreso2.csv").then(function(ingData, err) {
+d3.json("/case_date").then(function(ingData, err) {
   if (err) throw err;
 
   // Create a function to parse date and time
   var parseTime = d3.timeParse("%Y-%m-%d");
   // parse data
   ingData.forEach(function(data) {
-    data.hair_length = +data.CASOSHOMBRES;
-    data.num_hits = +data.CASOSMUJERES;
-    data.num_albums =+data.CASOSTOTALES;
-    data.FECHAINGRESO = parseTime(data.FECHAINGRESO);
+    data.hair_length = +data.CASOS_HOMBRES;
+    data.num_hits = +data.CASOS_MUJERES;
+    data.num_albums =+data.CASOS_TOTALES;
+    data.FECHA = parseTime(data.FECHA);
   });
 
   // xLinearScale function above csv import
@@ -255,21 +256,21 @@ var xLinearScale = xTimeScale
   var hairLengthLabel = labelsGroup.append("text")
     .attr("x", 0)
     .attr("y", 20)
-    .attr("value", "CASOSHOMBRES") // value to grab for event listener
+    .attr("value", "CASOS_HOMBRES") // value to grab for event listener
     .classed("active", true)
     .text("Hombres");
 
   var albumsLabel = labelsGroup.append("text")
     .attr("x", 90)
     .attr("y", 20)
-    .attr("value", "CASOSMUJERES") // value to grab for event listener
+    .attr("value", "CASOS_MUJERES") // value to grab for event listener
     .classed("inactive", true)
     .text("Mujeres");
 
     var albumsLabel = labelsGroup.append("text")
     .attr("x",170)
     .attr("y", 20)
-    .attr("value", "CASOSTOTALES") // value to grab for event listener
+    .attr("value", "CASOS_TOTALES") // value to grab for event listener
     .classed("inactive", true)
     .text("Total");
 
@@ -335,7 +336,7 @@ var xLinearScale = xTimeScale
         
 
         // changes classes to change bold text
-        if (chosenYAxis === "CASOSHOMBRES") {
+        if (chosenYAxis === "CASOS_HOMBRES") {
             console.log("Active",chosenYAxis)
           albumsLabel
             .classed("active", true)

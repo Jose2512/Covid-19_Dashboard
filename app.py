@@ -20,7 +20,7 @@ def maps():
 
 @app.route("/diseases")
 def diseases():
-    return render_template("diseases.html")
+    return render_template("Diseases.html")
 
 # DATA CALLS
 @app.route("/deaths_gender")
