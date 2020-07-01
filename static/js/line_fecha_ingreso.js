@@ -52,7 +52,7 @@ function yScale(ingData, chosenYAxis) {
     // create scales
    var yLinearScale = d3.scaleLinear()
      .domain([d3.min(ingData, d => d[chosenYAxis]) * 0.8,
-       d3.max(ingData, d => d[chosenYAxis]) * 7
+       d3.max(ingData, d => d[chosenYAxis]) 
      ])
       .range([height, 0]);
 
@@ -61,7 +61,7 @@ function yScale(ingData, chosenYAxis) {
     } else {
         var yLinearScale = d3.scaleLinear()
      .domain([d3.min(ingData, d => d[chosenYAxis]) * 0.8,
-       d3.max(ingData, d => d[chosenYAxis]) * 110
+       d3.max(ingData, d => d[chosenYAxis]) 
      ])
       .range([height, 0]);
       console.log("d3.min(ingData,",d3.min(ingData, d => d[chosenYAxis]))
