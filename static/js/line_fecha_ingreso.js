@@ -1,531 +1,366 @@
-function onMouseOver(d, i) {
-  d3.select(this).attr('class', 'highlight');
-
-}
-
-function initt() {
-
-// Step 1: Set up our chart
-//= ================================
+//new
 var svgWidth = 800;
-var svgHeight = 400;
+var svgHeight = 450;
 
 var margin = {
   top: 20,
   right: 40,
-  bottom: 30,
-  left: 80
+  bottom: 80,
+  left: 100
 };
 
 var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
-// Step 2: Create an SVG wrapper,
-// append an SVG group that will hold our chart,
+// Create an SVG wrapper, append an SVG group that will hold our chart,
 // and shift the latter by left and top margins.
-// =================================
-
-var svg = d3.select("#mainLinechart").append("svg")
-
+var svg = d3
+  .select("#mainLinechart")
+  .append("svg")
   .attr("width", svgWidth)
-  .attr("height", svgHeight)
-  .attr("class", "svg_line");
+  .attr("height", svgHeight);
 
+// Append an SVG group
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// Step 3:
-// Import data from the donuts.csv file
-// =================================
-d3.csv("../static/data/casos_fecha_ingreso2.csv").then(function(covdata) {
-  // Step 4: Parse the data
-  // Format the data and convert to numerical and date values
-  // =================================
-  // Create a function to parse date and time
-  var parseTime = d3.timeParse("%Y-%m-%d");
+// Initial Params
+var chosenXAxis = "FECHAINGRESO";
+var chosenYAxis = "CASOSTOTALES";
 
-  // Format the data
-  covdata.forEach(function(data) {
-    data.FECHAINGRESO = parseTime(data.FECHAINGRESO);
-    data.CASOSHOMBRES = +data.CASOSHOMBRES;
-    data.CASOSMUJERES = +data.CASOSMUJERES;
-    data.CASOSTOTALES = +data.CASOSTOTALES;
-  });
-
-  // Step 5: Create the scales for the chart
-  // =================================
-  var xTimeScale = d3.scaleTime()
-    .domain(d3.extent(covdata, d => d.FECHAINGRESO))
+// function used for updating x-scale var upon click on axis label
+function xScale(ingData, chosenXAxis) {
+  // create scales
+  var xLinearScale = d3.scaleLinear()
+    .domain([d3.min(ingData, d => d[chosenXAxis]) * 0.8,
+      d3.max(ingData, d => d[chosenXAxis]) * 1.2
+    ])
     .range([0, width]);
 
+  return xLinearScale;
 
+}
+
+//  yLinearScale = yScale(ingData, chosenYAxis);
+
+function yScale(ingData, chosenYAxis) {
+   // var chosenYAxis = "CASOSTOTALES";
+
+
+   if (chosenYAxis !=="CASOSTOTALES") {
+    // create scales
+   var yLinearScale = d3.scaleLinear()
+     .domain([d3.min(ingData, d => d[chosenYAxis]) * 0.8,
+       d3.max(ingData, d => d[chosenYAxis]) * 7
+     ])
+      .range([height, 0]);
+
+      
+  
+    } else {
+        var yLinearScale = d3.scaleLinear()
+     .domain([d3.min(ingData, d => d[chosenYAxis]) * 0.8,
+       d3.max(ingData, d => d[chosenYAxis]) * 110
+     ])
+      .range([height, 0]);
+      console.log("d3.min(ingData,",d3.min(ingData, d => d[chosenYAxis]))
+      console.log("d3.min(ingData 2,",d3.max(ingData, d => d[chosenYAxis]))
+      console.log("ysacle",chosenYAxis)
+
+    }
+
+
+
+    return yLinearScale;
+  
+  }
+
+
+
+
+
+
+ 
+
+function xtScale(ingData, chosenXAxis) {
+
+ var xTimeScale = d3.scaleTime()
+ .domain(d3.extent(ingData, d => d[chosenXAxis]))
+ .range([0, width]);
+
+ return xTimeScale
+
+}
+
+
+
+//xAxis = renderAxes(xLinearScale, xAxis);
+// function used for updating xAxis var upon click on axis label
+function renderAxes(newXScale, xAxis) {
+  var bottomAxis = d3.axisBottom(newXScale);
+
+  xAxis.transition()
+    .duration(1000)
+    .call(bottomAxis);
+
+  return xAxis;
+}
+
+
+
+// function used for updating xAxis var upon click on axis label
+function yrenderAxes(newYScale, yAxis) {
+
+
+   // var bottomAxis = d3.axisBottom(newXScale);
+    var leftAxis = d3.axisLeft(newYScale);
+  
+    yAxis.transition()
+      .duration(1000)
+      .call(leftAxis);
+  
+    return yAxis;
+  }
   
 
 
 
 
-  var yLinearScale = d3.scaleLinear().range([height, 0]);
+// function used for updating circles group with a transition to
+// new circles
+//circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
 
-  // Step 6: Set up the y-axis domain
-  // ==============================================
-  // @NEW! determine the max y value
-  // find the max of the CASOSHOMBRES data
-  var CASOSHOMBRESMax = d3.max(covdata, d => d.CASOSHOMBRES);
+function renderCircles(circlesGroup, newXScale, chosenXAxis) {
 
-  // find the max of the CASOSMUJERES data
-  var CASOSMUJERESMax = d3.max(covdata, d => d.CASOSMUJERES);
+  circlesGroup.transition()
+    .duration(1000)
+    .attr("cy", d => newXScale(d[chosenXAxis]));
 
-  // find the max of the CASOSTOTALES data
-  var CASOSTOTALESMax = d3.max(covdata, d => d.CASOSTOTALES);
+  return circlesGroup;
+}
 
-  /*
-  var yMax;
-  if (CASOSHOMBRESMax > CASOSMUJERESMax) {
-    yMax = CASOSHOMBRESMax;
+// function used for updating circles group with new tooltip
+function updateToolTip(chosenYAxis, circlesGroup) {
+
+
+  console.log ("update tool",chosenYAxis)
+  var label;
+
+  if (chosenYAxis === "CASOSMUJERES") {
+    label = "CASOSMUJERES:";
   }
   else {
-    yMax = CASOSTOTALESMax;
+    label = "CASOSHOMBRES:";
   }
 
-  */
- yMax = CASOSTOTALESMax;
+ 
+   // date formatter to display dates nicely
+var dateFormatter = d3.timeFormat("%d-%b");
 
-  // var yMax = CASOSHOMBRESMax > CASOSMUJERESMax ? CASOSHOMBRESMax : CASOSMUJERESMax;
+// Step 1: Append tooltip div
+var toolTip = d3.select("body")
+.append("div")
+.classed("tooltip", true);
 
-  // Use the yMax value to set the yLinearScale domain
-  yLinearScale.domain([0, yMax]);
 
+   // Step 2: Create "mouseover" event listener to display tooltip
+   circlesGroup.on("mouseover", function(d) {
+    //toolTip.style("display", "block")
+    toolTip.transition()
+    .duration(100)
+    .style("opacity", 0.9);
+     toolTip.html( `<strong>Fech: ${dateFormatter(d.FECHAINGRESO)}` + `<hr> Pacientes: ${d[chosenYAxis]}`)
+        .style("left", d3.event.pageX + "px")
+        .style("top", d3.event.pageY + "px");
+  })
+    // Step 3: Create "mouseout" event listener to hide tooltip
+   .on("mouseout", function() {
+     //toolTip.style("display", "none");
+
+     toolTip.transition()
+     .duration(100)
+     .style("opacity", 0.9);
+
+    }); // mouseover 
   
 
-  // Step 7: Create the axes
-  // =================================
+
+  return circlesGroup;
+}
+
+// Retrieve data from the CSV file and execute everything below
+d3.csv("../assets/data/casos_fecha_ingreso2.csv").then(function(ingData, err) {
+  if (err) throw err;
+
+  // Create a function to parse date and time
+  var parseTime = d3.timeParse("%Y-%m-%d");
+  // parse data
+  ingData.forEach(function(data) {
+    data.hair_length = +data.CASOSHOMBRES;
+    data.num_hits = +data.CASOSMUJERES;
+    data.num_albums =+data.CASOSTOTALES;
+    data.FECHAINGRESO = parseTime(data.FECHAINGRESO);
+  });
+
+  // xLinearScale function above csv import
+ // var xLinearScale = xScale(ingData, chosenXAxis);
+
+ console.log("chosenXAxis",chosenXAxis)
+
+var xTimeScale = xtScale(ingData, chosenXAxis)
+var xLinearScale = xTimeScale
+
+  // Create y scale function
+  var yLinearScale = d3.scaleLinear()
+    //.domain([0, d3.max(ingData, d => d.num_hits)])
+    .domain([0, d3.max(ingData, d => d.num_albums)])
+    .range([height, 0]);
+    
+
+  // Create initial axis functions
+  //var bottomAxis = d3.axisBottom(xLinearScale);
   var bottomAxis = d3.axisBottom(xTimeScale).tickFormat(d3.timeFormat("%Y-%m-%d"));
   var leftAxis = d3.axisLeft(yLinearScale);
 
-  // Step 8: Append the axes to the chartGroup
-  // ==============================================
-  // Add x-axis
-  chartGroup.append("g")
+
+  // append x axis
+  var xAxis = chartGroup.append("g")
+    .classed("x-axis", true)
     .attr("transform", `translate(0, ${height})`)
     .call(bottomAxis);
 
-  // Add y-axis
-  var yAxis = chartGroup.append("g").call(leftAxis);
+  // append y axis
+  //chartGroup.append("g")
+   // .call(leftAxis);
 
-  //var yAxis =  chartGroup.append("g")
-             //   .classed("y-axis", true)
+    var yAxis = chartGroup.append("g")
+    .call(leftAxis);
 
-
-  // Step 9: Set up two line generators and append two SVG paths
-  // ==============================================
-
-  // Line generator for CASOSHOMBRES data
-  var line1 = d3.line()
-    .x(d => xTimeScale(d.FECHAINGRESO))
-    .y(d => yLinearScale(d.CASOSHOMBRES));
-    var cas_tot_h = d3.line().y(d => yLinearScale(d.CASOSTOTALES));
-
-
-  // Line generator for CASOSMUJERES data
-  var line2 = d3.line()
-    .x(d => xTimeScale(d.FECHAINGRESO))
-    .y(d => yLinearScale(d.CASOSMUJERES));
-
-
-
-  // Line generator for CASOSTOTALES data
-  var line3 = d3.line()
-  .x(d => xTimeScale(d.FECHAINGRESO))
-  .y(d => yLinearScale(d.CASOSTOTALES));
- 
-
- // Append a path for line1
- var l1=  chartGroup
-    .data([covdata])
-    .append("path")
-    .attr("class", "line01")
-    .attr("id" ,"l1")
-   
-    .attr("d", line1)
-    .classed("line green", true);
-
-  // Append a path for line2
-  var l2= chartGroup
-    .data([covdata])
-    .append("path")
-    .attr("class", "line02")
-    .attr("id" ,"l2")
-    .attr("d", line2)
-    .classed("line orange", true) 
-
- 
-
-  // Append a path for line3
-  var l3= chartGroup
-  .data([covdata])
-  .append("path")
-  .attr("class", "line03")
-  .attr("id" ,"l3")
-  .attr("d", line3)
-  .classed("line blue", true); 
-
-
-
-
-  // Create axes labels
-  chartGroup.append("text")
-  .attr("transform", "rotate(-90)")
-  .attr("y", 0 - margin.left + 7)
-  .attr("x", 0 - (height / 2))
-  .attr("dy", "1em")
-  .attr("class", "axisText")
-   .text("Ingresos por Dia    ");
-
-  chartGroup.append("text")
-             
-  .attr("transform", `translate(${width / 2}, ${height + margin.top + 10})`)
-  .attr("class", "axisText")
-  .text("");
-
-// Create group for 3 options  
-var xlabelsGroup = chartGroup.append("g")
-    .attr('class', 'legend');
-
-xlabelsGroup .append('rect')
-        .attr('class', "line green")
-        .attr("id" ,"r1")
-        .attr('x', 10) //(w / 2) - (margin.middle * 3))
-        .attr('y', 12)
-        .attr('width', 12)
-        .attr('height', 12); 
-
-
-
-var xHomLabel = xlabelsGroup.append("text")
-
-.attr("x", 24)
-.attr("y", 24)
-.attr("value", "hom") // value to grab for event listener
-.classed("active", true)
-.text("Hombres "); 
-
-
-xlabelsGroup .append('rect')
-        .attr('class', 'line orange')
-        .attr("id" ,"r2")
-        .attr('x', 95) //(w / 2) - (margin.middle * 3))
-        .attr('y', 12)
-        .attr('width', 12)
-        .attr('height', 12); 
-
-var xMujLabel = xlabelsGroup.append("text")
-.attr("x", 110)
-.attr("y", 24)
-.attr("value", "muj") // value to grab for event listener
-.classed("active", true)
-.text("Mujeres");
-
-
-xlabelsGroup .append('rect')
-        .attr('class', 'line blue')
-        .attr('x', 190) //(w / 2) - (margin.middle * 3))
-        .attr('y', 12)
-        .attr('width', 12)
-        .attr('height', 12); 
-
-
-var xMujLabel = xlabelsGroup.append("text")
-.attr("x", 210)
-.attr("y", 24)
-.attr("value", "tot") // value to grab for event listener
-.classed("active", true)
-.on("mouseover", onMouseOver) //Add listener for the mouseover event
-//.on("mouseout", onMouseOut)   //Add listener for the mouseout event
-.text("Total");  
-
-
-
-
-var xMujLabel = xlabelsGroup.append("text")
-.attr("x", 1)
-.attr("y", 380)
-.attr("value", "ini") // value to grab for event listener
-.classed("active", true)
-.text("Inicio"); 
-  
-
-
-
-
-// x axis labels event listener
-xlabelsGroup.selectAll("text")
-.on("click", function() {
-
-// get value of selection
-var value = d3.select(this).attr("value");
-console.log ("X Chosen Value",value )
-
-
-
-    
-  if (value == "homx") {
-   
-    //Initially set the lines to not show	
-    d3.selectAll(".line").style("opacity","0"); 
-    d3.selectAll(".line01").style("opacity","1"); 
-  
-  // Give these new data to update line
- l1
-      .transition()
-      .duration(500)
-      .attr("d", line1) 
-
-      var opt ="1"
-
-  //    circle_toolt(chartGroup, value,covdata,xTimeScale,yLinearScale,opt )
-      
-
-    } else if (value == "mujx") {
-
-      
-    //Initially set the lines to not show	
-    d3.selectAll(".line").style("opacity","0"); 
-    d3.selectAll(".line02").style("opacity","1"); 
-  
-  // Give these new data to update line
-  l1
-      .transition()
-      .duration(500)
-      .attr("d", line2)
-      var opt ="2"
-
-
-    }else if (value == "tot") {
-
-      console.log ("Hombre",value )
-   //Initially set the lines to not show	
-  //d3.selectAll(".line").style("opacity","0");  
-   d3.selectAll("#r1").style("opacity","0");
-   d3.selectAll("#r2").style("opacity","0");
-   d3.selectAll(".line02").style("opacity","0");
-   d3.selectAll(".line03").style("opacity","1"); 
-   var opt ="3"
-
- 
- // Give these new data to update line
- l1
-     .transition()
-     .duration(500)
-     .attr("d", line3)
-
-   } 
-   
- 
-   else if (value == "ini") { 
-    console.log ("other",value )
-    
-    l1
-      .transition()
-      .duration(500)
-      .attr("d", line1);
-
-      d3.selectAll(".line").style("opacity","1"); 
-
-    
-    } // choosing options
-
-    
-
-
-
-
-
-
-
-// tool tips
-
-
-if (opt=="1") {
-
-var chosenYAxis="CASOSHOMBRES"
-console.log("Hombres enra")
-// append circles
-
-var circlesGroup = chartGroup.selectAll("circle")
-.data(covdata)
-.enter()
-.append("circle")
-.attr("cx", d => xTimeScale(d.FECHAINGRESO))
-.attr("cy",d =>yLinearScale(d[chosenYAxis]))
-
-.attr("r", "5")
-.attr("fill", "gold")
-.attr("stroke-width", "1")
-.attr("stroke", "black");
-
-
-console.log("Hombres sale")
-
-// date formatter to display dates nicely
-var dateFormatter = d3.timeFormat("%d-%b");
-
-
-// Step 1: Append tooltip div
-var toolTip = d3.select("body")
-.append("div")
-.classed("tooltip", true);
-
-
-   // Step 2: Create "mouseover" event listener to display tooltip
-   circlesGroup.on("mouseover", function(d) {
-    //toolTip.style("display", "block")
-    toolTip.transition()
-    .duration(100)
-    .style("opacity", 0.9);
-    toolTip.html( `<strong>Fech: ${dateFormatter(d.FECHAINGRESO)}` + `<hr> Pacientes: ${d.CASOSHOMBRES}`)
-        .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY + "px");
-  })
-    // Step 3: Create "mouseout" event listener to hide tooltip
-    .on("mouseout", function() {
-     //toolTip.style("display", "none");
-
-     toolTip.transition()
-     .duration(100)
-     .style("opacity", 0.9);
-
-    }); // mouseover
-
-
-
-} else if (opt=="2") {
- 
-  console.log("d.CASOSMUJERES")
-  var chosenYAxis ="CASOSMUJERES"
-
-
-var circlesGroup = chartGroup.selectAll("circle")
-.data(covdata)
-.enter()
-.append("circle")
-.attr("cx", d => xTimeScale(d.FECHAINGRESO))
-.attr("cy",d => yLinearScale(d.CASOSMUJERES))
-
-.attr("r", "4")
-.attr("fill", "gold")
-.attr("stroke-width", "1")
-.attr("stroke", "black");
-
-/*
-var chosenYAxis="CASOSTOTALES"
-circlesGroup.transition()
-.duration(1000)
-//.attr("cx", d => xTimeScale(d.FECHAINGRESO))
-.attr("cy",d =>yLinearScale(d[chosenYAxis]))
-console.log (" cy paint")
-
-*/
-
-
-// date formatter to display dates nicely
-var dateFormatter = d3.timeFormat("%d-%b");
-
-// Step 1: Append tooltip div
-var toolTip = d3.select("body")
-.append("div")
-.classed("tooltip", true);
-
-
-   // Step 2: Create "mouseover" event listener to display tooltip
-   circlesGroup.on("mouseover", function(d) {
-    //toolTip.style("display", "block")
-    toolTip.transition()
-    .duration(100)
-    .style("opacity", 0.9);
-    toolTip.html( `<strong>Fech: ${dateFormatter(d.FECHAINGRESO)}` + `<hr> Pacientes: ${d.CASOSMUJERES}`)
-        .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY + "px");
-  })
-    // Step 3: Create "mouseout" event listener to hide tooltip
-    .on("mouseout", function() {
-     //toolTip.style("display", "none");
-
-     toolTip.transition()
-     .duration(100)
-     .style("opacity", 0.9);
-
-    }); // mouseover
-
-
-
-
-
-
-}else if (opt=="3") {
-
-  // append circles
+  // append initial circles
   var circlesGroup = chartGroup.selectAll("circle")
-  .data(covdata)
-  .enter()
-  .append("circle")
-  .attr("cx", d => xTimeScale(d.FECHAINGRESO))
-  .attr("cy",d => yLinearScale(d.CASOSTOTALES))
+    .data(ingData)
+    .enter()
+    .append("circle")
+    .attr("cx", d => xLinearScale(d[chosenXAxis]))
+    .attr("cy", d => yLinearScale(d.num_albums )) //casos totales
+    .attr("r", 4)
+    .attr("fill", "pink")
+    //.attr("opacity", ".5");
 
-  .attr("r", "4")
-  .attr("fill", "gold")
-  .attr("stroke-width", "1")
-  .attr("stroke", "black");
+  // Create group for two x-axis labels
+  var labelsGroup = chartGroup.append("g")
+    //.attr("transform", `translate(${width / 2}, ${height + 20})`);
+    .attr("transform", `translate(${width/1.5 }, ${height  +20 })`);
+
+  var hairLengthLabel = labelsGroup.append("text")
+    .attr("x", 0)
+    .attr("y", 20)
+    .attr("value", "CASOSHOMBRES") // value to grab for event listener
+    .classed("active", true)
+    .text("Hombres");
+
+  var albumsLabel = labelsGroup.append("text")
+    .attr("x", 90)
+    .attr("y", 20)
+    .attr("value", "CASOSMUJERES") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Mujeres");
+
+    var albumsLabel = labelsGroup.append("text")
+    .attr("x",170)
+    .attr("y", 20)
+    .attr("value", "CASOSTOTALES") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Total");
+
+  // append y axis
+  chartGroup.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height /1.5))
+    .attr("dy", "1em")
+    .classed("axis-text", true)
+    .text("   Numero de Ingresos    ");
+
+  // updateToolTip function above csv import
+ 
+  var circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
+
+
+ 
+  // x axis labels event listener
+  labelsGroup.selectAll("text")
+    .on("click", function() {
+      // get value of selection
+      var value = d3.select(this).attr("value");
+      if (value !== chosenYAxis) {
 
 
 
-// date formatter to display dates nicely
-var dateFormatter = d3.timeFormat("%d-%b");
+         d3.selectAll(".tooltip")
+     
+        .style("visibility", "hidden")
 
 
-// Step 1: Append tooltip div
-var toolTip = d3.select("body")
-.append("div")
-.classed("tooltip", true);
+        // replaces chosenXAxis with value
+   
+        chosenYAxis = value;
+        console.log("about new option",chosenYAxis)
+
+    
+
+        // functions here found above csv import
+        // updates x scale for new data
+       
+
+        yLinearScale = yScale(ingData, chosenYAxis);
 
 
-   // Step 2: Create "mouseover" event listener to display tooltip
-   circlesGroup.on("mouseover", function(d) {
-    //toolTip.style("display", "block")
-    toolTip.transition()
-    .duration(100)
-    .style("opacity", 0.9);
-    toolTip.html( `<strong>Fech: ${dateFormatter(d.FECHAINGRESO)}` + `<hr> Pacientes: ${d.CASOSTOTALES}`)
-        .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY + "px");
-  })
-    // Step 3: Create "mouseout" event listener to hide tooltip
-    .on("mouseout", function() {
-     //toolTip.style("display", "none");
+        // updates x axis with transition
 
-     toolTip.transition()
-     .duration(100)
-     .style("opacity", 0.9);
+      //  xAxis = renderAxes(xLinearScale, xAxis);
 
-    }); // mouseover
+        yAxis = yrenderAxes(yLinearScale, yAxis);
 
-  } //opt 3
+        // updates circles with new x values
+      
+        circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
 
 
+        // updates tooltips with new info
+        //circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
+
+        circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
+
+        
+
+        // changes classes to change bold text
+        if (chosenYAxis === "CASOSHOMBRES") {
+            console.log("Active",chosenYAxis)
+          albumsLabel
+            .classed("active", true)
+            .classed("inactive", false);
+          hairLengthLabel
+            .classed("active", false)
+            .classed("inactive", true);
+        }
+        else {
+          albumsLabel
+            .classed("active", false)
+            .classed("inactive", true);
+          hairLengthLabel
+            .classed("active", true)
+            .classed("inactive", false);
+        }
+
+
+
+      }  //end if
+    });  // listener  labels group  */
+
+
+
+
+}).catch(function(error) {
+  console.log(error);
 }); 
-
-
-}).catch(function(error) {  console.log(error);});  //end import csv
-
-
-} // end init
-
-
-
-
- initt()
-
-  
-
-
-
-
