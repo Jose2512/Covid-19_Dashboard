@@ -103,6 +103,11 @@ body{
 
 }
 
+.bubbles {
+    opacity: 0.5;
+}
+
+
 #Bubblechart-Table{
 
 }
