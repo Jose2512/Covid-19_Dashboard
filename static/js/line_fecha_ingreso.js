@@ -28,6 +28,7 @@ var chartGroup = svg.append("g")
 // Initial Params
 var chosenXAxis = "FECHA";
 var chosenYAxis = "CASOS_TOTALES";
+var linegraph   ="no"
 
 // function used for updating x-scale var upon click on axis label
 function xScale(ingData, chosenXAxis) {
@@ -131,11 +132,25 @@ function yrenderAxes(newYScale, yAxis) {
 // new circles
 //circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
 
-function renderCircles(circlesGroup, newXScale, chosenXAxis) {
+function renderCircles(circlesGroup, newXScale, chosenXAxis,vl_color) {
 
+  if (vl_color == "pink") {
   circlesGroup.transition()
     .duration(1000)
-    .attr("cy", d => newXScale(d[chosenXAxis]));
+    .attr("cy", d => newXScale(d[chosenXAxis]))
+    .attr("fill", vl_color)
+    //.attr("opacity", ".") 
+  } else {
+
+    circlesGroup.transition()
+    .duration(1000)
+    .attr("cy", d => newXScale(d[chosenXAxis]))
+    .attr("fill", vl_color)
+    .attr("opacity", ".6") 
+
+
+  }
+
 
   return circlesGroup;
 }
@@ -189,6 +204,173 @@ var toolTip = d3.select("body")
   return circlesGroup;
 }
 
+// pick the circle color for each option
+
+
+function  select_color(value) {
+  switch(value) {
+    case "CASOS_HOMBRES":
+      vl_color = "blue";
+      break;
+    
+     case "CASOS_MUJERES":
+      vl_color = "#f781bf";
+     
+      break;
+    default:
+      vl_color = "black";
+  }
+  return vl_color
+}
+
+
+// creates the line
+function line_mot(chartGroup,ingData, xLinearScale,yLinearScale,chosenYAxis) //,bottomAxis,leftAxis)
+
+//chosenYAxis
+// .attr("cy", d => newXScale(d[chosenXAxis]))
+ {
+
+console.log("enter motion",chosenYAxis)
+ 
+// Line generators for each line
+    var line1 = d3.line()
+    .x(d => xLinearScale(d.FECHA))
+    .y(d => yLinearScale(d[chosenYAxis]));
+
+
+
+  // Append a path for line1
+  var lpath =  chartGroup.append("path")
+    .data([ingData])
+    .attr("d", line1)
+    //.attr("class", "line01")
+    .attr("id","line01")
+    .attr("stroke" , "black")
+    .attr("stroke-width" , 2)
+    .attr("opacity", ".7")
+    .attr("stroke-dasharray", ("3, 3"));
+    console.log("line3")
+
+var totalLength = lpath.node().getTotalLength();
+
+lpath.attr("stroke-dasharray", totalLength + " " + totalLength)
+    .attr("stroke-dashoffset", totalLength)
+    .transition()
+		.duration(10000)
+		.ease(d3.easeLinear)  // check more options https://bl.ocks.org/d3noob/39e8263efd3db34c3bde486f9067a961
+		.attr("stroke-dashoffset", 0);
+
+    return lpath
+
+}
+
+
+function labelx_group(chartGroup) {
+
+  // Create group for two x-axis labels
+  var labelsGroup = chartGroup.append("g")
+    //  .attr("transform", `translate(${width/1.7 }, ${height  +20 })`);
+
+    labelsGroup .append('rect')
+     // .attr('class', "line green")
+      .attr("id" ,"r1")
+      .style("fill","blue")
+      .attr("opacity", ".7")
+      .attr('x', 3) //(w / 2) - (margin.middle * 3))
+      .attr('y', 9)
+      .attr('width', 12)
+      .attr('height', 12); 
+
+
+
+  var hLabel = labelsGroup.append("text")
+    .attr("x", 18)
+    .attr("y", 20)
+    .attr("value", "CASOS_HOMBRES") // value to grab for event listener
+    .classed("active", true)
+    .text("Hombres");
+
+    labelsGroup .append('rect')
+   
+     .attr("id" ,"r1")
+     .style("fill","pink")
+     .attr('x', 90) //(w / 2) - (margin.middle * 3))
+     .attr('y', 9)
+     .attr('width', 12)
+     .attr('height', 12); 
+
+
+  var mLabel = labelsGroup.append("text")
+    .attr("x", 105)
+    .attr("y", 20)
+    .attr("value", "CASOS_MUJERES") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Mujeres");
+
+
+ 
+    labelsGroup .append('rect')
+ 
+     .attr("id" ,"r1")
+     .style("fill","black")
+     .attr("opacity", ".7")
+     .attr('x', 170) //(w / 2) - (margin.middle * 3))
+     .attr('y', 9)
+     .attr('width', 12)
+     .attr('height', 12); 
+
+
+    var totLabel = labelsGroup.append("text")
+    .attr("x",185)
+    .attr("y", 20)
+    .attr("value", "CASOS_TOTALES") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Acumulado");
+
+/*
+    labelsGroup .append('rect')
+ 
+     .attr("id" ,"r1")
+     .style("fill","red")
+     .attr("opacity", ".7")
+     .attr('x', 3)//(w / 2) - (margin.middle * 3))
+     .attr('y', 380)
+     .attr('width', 12)
+     .attr('height', 12); 
+
+
+    var graphLabel = labelsGroup.append("text")
+    .attr("x",30)
+    .attr("y", 390)
+    //.attr("value", "yes") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Total Casos");
+
+*/
+
+
+  // append y axis
+  chartGroup.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height /1.5))
+    .attr("dy", "1em")
+    .classed("axis-text", true)
+    .text("Casos por dia");
+
+
+
+
+return labelsGroup
+
+} // labelx_group
+
+
+
+
+
+
 // Retrieve data from the CSV file and execute everything below
 d3.json("/case_date").then(function(ingData, err) {
   if (err) throw err;
@@ -197,29 +379,27 @@ d3.json("/case_date").then(function(ingData, err) {
   var parseTime = d3.timeParse("%Y-%m-%d");
   // parse data
   ingData.forEach(function(data) {
-    data.hair_length = +data.CASOS_HOMBRES;
-    data.num_hits = +data.CASOS_MUJERES;
-    data.num_albums =+data.CASOS_TOTALES;
+    data.CASOS_HOMBRES = +data.CASOS_HOMBRES;
+    data.CASOS_MUJERES = +data.CASOS_MUJERES;
+    data.CASOS_TOTALES =+data.CASOS_TOTALES;
     data.FECHA = parseTime(data.FECHA);
+
   });
 
   // xLinearScale function above csv import
  // var xLinearScale = xScale(ingData, chosenXAxis);
 
- console.log("chosenXAxis",chosenXAxis)
 
 var xTimeScale = xtScale(ingData, chosenXAxis)
 var xLinearScale = xTimeScale
 
   // Create y scale function
   var yLinearScale = d3.scaleLinear()
-    //.domain([0, d3.max(ingData, d => d.num_hits)])
-    .domain([0, d3.max(ingData, d => d.num_albums)])
+    .domain([0, d3.max(ingData, d => d.CASOS_TOTALES)])
     .range([height, 0]);
     
 
   // Create initial axis functions
-  //var bottomAxis = d3.axisBottom(xLinearScale);
   var bottomAxis = d3.axisBottom(xTimeScale).tickFormat(d3.timeFormat("%Y-%m-%d"));
   var leftAxis = d3.axisLeft(yLinearScale);
 
@@ -230,9 +410,7 @@ var xLinearScale = xTimeScale
     .attr("transform", `translate(0, ${height})`)
     .call(bottomAxis);
 
-  // append y axis
-  //chartGroup.append("g")
-   // .call(leftAxis);
+   
 
     var yAxis = chartGroup.append("g")
     .call(leftAxis);
@@ -243,71 +421,56 @@ var xLinearScale = xTimeScale
     .enter()
     .append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
-    .attr("cy", d => yLinearScale(d.num_albums )) //casos totales
+    .attr("cy", d => yLinearScale(d.CASOS_TOTALES )) //casos totales
     .attr("r", 4)
-    .attr("fill", "pink")
-    //.attr("opacity", ".5");
+    .attr("fill", "black")
+    .attr("opacity", ".7");
 
-  // Create group for two x-axis labels
-  var labelsGroup = chartGroup.append("g")
-    //.attr("transform", `translate(${width / 2}, ${height + 20})`);
-    .attr("transform", `translate(${width/1.5 }, ${height  +20 })`);
+   // create the x labels
+  var labelsGroup = labelx_group(chartGroup)
 
-  var hairLengthLabel = labelsGroup.append("text")
-    .attr("x", 0)
-    .attr("y", 20)
-    .attr("value", "CASOS_HOMBRES") // value to grab for event listener
-    .classed("active", true)
-    .text("Hombres");
 
-  var albumsLabel = labelsGroup.append("text")
-    .attr("x", 90)
-    .attr("y", 20)
-    .attr("value", "CASOS_MUJERES") // value to grab for event listener
-    .classed("inactive", true)
-    .text("Mujeres");
-
-    var albumsLabel = labelsGroup.append("text")
-    .attr("x",170)
-    .attr("y", 20)
-    .attr("value", "CASOS_TOTALES") // value to grab for event listener
-    .classed("inactive", true)
-    .text("Total");
-
-  // append y axis
-  chartGroup.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left)
-    .attr("x", 0 - (height /1.5))
-    .attr("dy", "1em")
-    .classed("axis-text", true)
-    .text("   Numero de Ingresos    ");
 
   // updateToolTip function above csv import
  
   var circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
+  vl_graph = "1"
 
-
+// draw the line
+ //var lpath = line_mot(chartGroup,ingData, xLinearScale,yLinearScale,chosenYAxis)
  
+ var old_value = chosenYAxis
   // x axis labels event listener
   labelsGroup.selectAll("text")
     .on("click", function() {
       // get value of selection
       var value = d3.select(this).attr("value");
+      
+      var new_value = value
+      
+      console.log("old value", old_value)
+      console.log("new value", new_value)
+      old_value = new_value
+      console.log("old value===", old_value)
+
       if (value !== chosenYAxis) {
 
 
 
+       // remove the line graph
+       chartGroup.select("#line01").remove()
+       // d3.select("#p2").style("color", "green");
+
+      
          d3.selectAll(".tooltip")
-     
         .style("visibility", "hidden")
 
-
-        // replaces chosenXAxis with value
-   
+        // replaces chosenXAxis with value  
         chosenYAxis = value;
-        console.log("about new option",chosenYAxis)
+       
 
+        var  vl_color =  select_color(value);
+  
     
 
         // functions here found above csv import
@@ -319,13 +482,16 @@ var xLinearScale = xTimeScale
 
         // updates x axis with transition
 
-      //  xAxis = renderAxes(xLinearScale, xAxis);
 
         yAxis = yrenderAxes(yLinearScale, yAxis);
 
+
+
+
+
         // updates circles with new x values
       
-        circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
+        circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis,vl_color);
 
 
         // updates tooltips with new info
@@ -334,26 +500,9 @@ var xLinearScale = xTimeScale
         circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
 
         
-
-        // changes classes to change bold text
-        if (chosenYAxis === "CASOS_HOMBRES") {
-            console.log("Active",chosenYAxis)
-          albumsLabel
-            .classed("active", true)
-            .classed("inactive", false);
-          hairLengthLabel
-            .classed("active", false)
-            .classed("inactive", true);
-        }
-        else {
-          albumsLabel
-            .classed("active", false)
-            .classed("inactive", true);
-          hairLengthLabel
-            .classed("active", true)
-            .classed("inactive", false);
-        }
-
+        
+        var lpath = line_mot(chartGroup,ingData, xLinearScale,yLinearScale,chosenYAxis)
+    
 
 
       }  //end if
