@@ -50,7 +50,14 @@ def case_afluencia():
 @app.route("/diseases_count")
 def diseases_count():
     return convjson(mongo.db.enfermedades.find())
-    
+
+@app.route("/diseases_gender")
+def diseases_count():
+    return convjson(mongo.db.enfermedades_genero.find())
+
+@app.route("/diseases_age")
+def diseases_count():
+    return convjson(mongo.db.enfermedades_edades.find())
 
 def convjson(data):
     dataset = data
