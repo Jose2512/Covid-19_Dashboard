@@ -51,7 +51,7 @@ Data: http://datos.cdmx.gob.mx`
 );
 //Aquí se cambia la velocidad (default = 250)
   main.variable(observer("duration")).define("duration", function(){return(
-350
+100
 )});
 
   main.variable(observer()).define(["data"], function(data){return(
@@ -154,7 +154,7 @@ function bars(svg) {
   main.variable(observer("labels")).define("labels", ["n","x","prev","y","next","textTween"], function(n,x,prev,y,next,textTween){return(
 function labels(svg) {
   let label = svg.append("g")
-      .style("font", "bold 12px var(--sans-serif)")
+      .style("font", "bold 16px var(--sans-serif)")
       .style("font-variant-numeric", "tabular-nums")
       .attr("text-anchor", "end")
     .selectAll("text");
@@ -234,7 +234,7 @@ function ticker(svg) {
 )});
 
   main.variable(observer("formatDate")).define("formatDate", ["d3"], function(d3){return(
-d3.utcFormat("%Y")
+d3.utcFormat("%d-%m-%Y")
 )});
 
   main.variable(observer("color")).define("color", ["d3","data"], function(d3,data)

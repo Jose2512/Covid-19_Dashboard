@@ -20,8 +20,19 @@
     <!--BOOTSTRAP AND CSSS-->  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./static/navigation/inspector.css">
+
 </head>
 <body>
+    <script type="module">
+
+        import define from "./static/navigation/index.js";
+        import {Runtime, Library, Inspector} from "./static/navigation/runtime.js";
+        
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into("#barrace"));
+        
+    </script>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,11 +54,21 @@
     </nav> 
 
     <div class="container-fluid">
-        <div class="row toppadding">
-            <div class="col-xl-9">
+        <div class="row">
+            <div class="col-12 toppadding">
             <div class="manualcard"> 
                 <div class="cardtitle">Capacidad hospitalaria de la ZMVM</div>
                 <div id="heatmaphosp"></div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 toppadding">
+                <div class="manualcard">
+                    <div class="cardtitle">Titulo
+                        <div id="barrace"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
