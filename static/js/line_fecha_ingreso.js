@@ -1,5 +1,6 @@
 //new
-var svgWidth = 800;
+
+var svgWidth = document.getElementById('mainLinechart').offsetWidth;
 var svgHeight = 450;
 
 var margin = {
