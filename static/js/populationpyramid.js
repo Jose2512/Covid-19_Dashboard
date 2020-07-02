@@ -45,10 +45,17 @@ function pyramidBuilder(data, target, options) {
             return d / totalPopulation;
         };
 
+    var svgArea = d3.select(target).select("svg");
+
+    if (!svgArea.empty()) {
+        svgArea.remove();
+    }
+
     var styleSection = d3.select(target).append('style')
     .text('svg {max-width:100%} \
     .axis line,axis path {shape-rendering: crispEdges;fill: transparent;stroke: #555;} ' )
     
+
 
     
     var region = d3.select(target).append('svg')
@@ -259,6 +266,7 @@ function pyramidBuilder(data, target, options) {
 
 // data must be in a format with age, male, and female in each object
 
+
 function loadData(){
 var exampleData = d3.json("/cases_gender").then(function(data){
     pyramidBuilder(data, '#charMW', {height: 400, width: 600});
@@ -270,4 +278,4 @@ var exampleData = d3.json("/deaths_gender").then(function(data){
 }
 
 loadData();
-
+d3.select(window).on("resize", loadData)
