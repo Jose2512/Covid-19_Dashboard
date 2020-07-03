@@ -123,6 +123,7 @@ body{
 
 /* OTHER STUFF */
 
+
 /* OTHER STUFF */
 .line {
     fill: none;
@@ -143,7 +144,6 @@ body{
 } 
 
 /* LINE CHART */
-path {
+/* path {
     fill: none;
-    
-    }
+    } */

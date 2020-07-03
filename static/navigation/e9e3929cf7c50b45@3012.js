@@ -8,18 +8,18 @@ export default function define(runtime, observer) {
 d3.csvParse(await FileAttachment("casos_delegacion_fechaw2.csv").text(), d3.autoType)
 )});
 
-  main.variable(observer("viewof replay")).define("viewof replay", ["html"], function(html){return(
-html`<button>Replay`
-)});
+//   main.variable(observer("viewof replay")).define("viewof replay", ["html"], function(html){return(
+// html`<button>Replay`
+// )});
   main.variable(observer("replay")).define("replay", ["Generators", "viewof replay"], (G, _) => G.input(_));
-  main.variable(observer("title")).define("title", ["md"], function(md){return(
-md`## Casos COVID por día por Alcaldía
+//   main.variable(observer("title")).define("title", ["md"], function(md){return(
+// // md`## Casos COVID por día por Alcaldía
 
-Data: http://datos.cdmx.gob.mx`
-)});
-  main.variable(observer("chart")).define("chart", ["replay","d3","width","height","bars","axis","labels","ticker","keyframes","duration","x","invalidation"], async function*(replay,d3,width,height,bars,axis,labels,ticker,keyframes,duration,x,invalidation)
+// // Data: http://datos.cdmx.gob.mx`
+// )});
+  main.variable(observer("chart")).define("chart", ["d3","width","height","bars","axis","labels","ticker","keyframes","duration","x","invalidation"], async function*(d3,width,height,bars,axis,labels,ticker,keyframes,duration,x,invalidation)
 {
-  replay;
+  // replay;
 
   const svg = d3.create("svg")
       .attr("viewBox", [0, 0, width, height]);

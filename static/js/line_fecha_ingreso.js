@@ -263,6 +263,7 @@ function renderGraph(dataset){
       .attr("id","line01")
       .attr("stroke" , "black")
       .attr("stroke-width" , 2)
+      .attr("fill", "none")
       .attr("opacity", ".7")
       .attr("stroke-dasharray", ("3, 3"));
       // console.log("line3")
