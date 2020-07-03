@@ -19,7 +19,7 @@ file_to_load = "../../Resources/afluencia-preliminar-en-transporte-publico.csv"
 
 daily_transport_data = pd.read_csv(file_to_load)
 
-clean_covid_data = covid_cases_data[covid_cases_data["positivo"]=="Positivo SARS-CoV-2"]
+clean_covid_data = covid_cases_data[covid_cases_data["positivo"]!="Positivo SARS-CoV-2"]
 clean_covid_data = clean_covid_data[["ID_REGISTRO","SEXO","MUNICIPIO RESIDENCIA","FECHA INGRESO", "FECHA DEFUNCION","INTUBADO","EDAD","DIABETES","EPOC","ASMA","INMUNOSUPRESION","HIPERTENSION","CARDIOVASCULAR","OBESIDAD","RENAL CRONICA","TABAQUISMO"]]
 clean_covid_data = clean_covid_data.fillna("NO")
 
@@ -181,6 +181,7 @@ data_dict = analisis_enfermedades.to_dict("records")
 for record in data_dict:
     enfermedades.insert_one(record)
 
+
 afluencia_total_diaria = daily_transport_data.rename(columns={'AFLUENCIA TOTAL\n(cifras preliminares)':'AFLUENCIA TOTAL'})[["FECHA","AFLUENCIA TOTAL"]]
 afluencia_total_diaria = afluencia_total_diaria.groupby(["FECHA"]).sum()
 casos_afluencia_diaria = pd.DataFrame.merge(cases_per_date,afluencia_total_diaria,how='left',on='FECHA')
@@ -196,3 +197,55 @@ data_dict = casos_afluencia_diaria.to_dict("records")
 
 for record in data_dict:
     casos_vs_afluencia_diaria.insert_one(record)
+
+generos = ["TODOS","MUJER","HOMBRE"]
+condiciones = ["TODOS","SIN_CONDICION","DIABETES","EPOC","ASMA","INMUNOSUPRESION","HIPERTENSION","CARDIOVASCULAR","OBESIDAD","RENAL_CRONICA","TABAQUISMO"]
+datos = ["TODOS","INTUBADOS","DIFUNTOS"]
+bins = [-1, 15, 20, 30, 40, 50, 60, 70, 80, 90, 999]
+group_labels=['0-15','16-20','21-30','31-40','41-50','51-60','61-70','71-80','81-90','91+']
+enfermedades_edades = pd.DataFrame(columns=['RANGO_DE_EDAD'], data=group_labels)
+for condicion in condiciones:
+    resumen = clean_covid_data.rename(columns={'FECHA INGRESO':'FECHA_INGRESO','RENAL CRONICA':'RENAL_CRONICA'}).copy()
+    if condicion != "TODOS":
+        if condicion == "SIN_CONDICION":
+            resumen = resumen[(resumen['DIABETES']=="NO") & (resumen['TABAQUISMO']=="NO") & (resumen['EPOC']=="NO") & (resumen['ASMA']=="NO") & (resumen['INMUNOSUPRESION']=="NO") & (resumen['HIPERTENSION']=="NO") & (resumen['CARDIOVASCULAR']=="NO") & (resumen['RENAL_CRONICA']=="NO") & (resumen['OBESIDAD']=="NO")]
+        else:
+            resumen = resumen[resumen[condicion]=="SI"]
+    resumen["RANGO_DE_EDAD"] = pd.cut(resumen["EDAD"], bins, labels=group_labels)
+    resumen = resumen.groupby(['RANGO_DE_EDAD']).count().drop(['SEXO','FECHA DEFUNCION','MUNICIPIO RESIDENCIA','FECHA_INGRESO','INTUBADO','EDAD','DIABETES','EPOC','ASMA','INMUNOSUPRESION','HIPERTENSION','CARDIOVASCULAR','OBESIDAD','RENAL_CRONICA','TABAQUISMO'],axis=1).rename(columns={'ID_REGISTRO':f'{condicion}'}).reset_index()
+    enfermedades_edades = enfermedades_edades.merge(resumen, how='left', on='RANGO_DE_EDAD')
+enfermedades__edades = enfermedades_edades
+
+#COLLECTION
+enfermedades_edades=covid.enfermedades_edades
+enfermedades_edades.drop()
+data_dict = enfermedades__edades.to_dict("records")
+
+for record in data_dict:
+    enfermedades_edades.insert_one(record)
+
+generos = ["TODOS","MUJER","HOMBRE"]
+condiciones = ["TODOS","SIN_CONDICION","DIABETES","EPOC","ASMA","INMUNOSUPRESION","HIPERTENSION","CARDIOVASCULAR","OBESIDAD","RENAL_CRONICA","TABAQUISMO"]
+datos = ["TODOS","INTUBADOS","DIFUNTOS"]
+enfermedades_genero = pd.DataFrame(columns=['SEXO'], data=clean_covid_data['SEXO'].unique().tolist())
+for condicion in condiciones:
+    resumen = clean_covid_data.rename(columns={'FECHA INGRESO':'FECHA_INGRESO','RENAL CRONICA':'RENAL_CRONICA'}).copy()
+    if condicion != "TODOS":
+        if condicion == "SIN_CONDICION":
+            resumen = resumen[(resumen['DIABETES']=="NO") & (resumen['TABAQUISMO']=="NO") & (resumen['EPOC']=="NO") & (resumen['ASMA']=="NO") & (resumen['INMUNOSUPRESION']=="NO") & (resumen['HIPERTENSION']=="NO") & (resumen['CARDIOVASCULAR']=="NO") & (resumen['RENAL_CRONICA']=="NO") & (resumen['OBESIDAD']=="NO")]
+        else:
+            resumen = resumen[resumen[condicion]=="SI"]
+    resumen = resumen.groupby(['SEXO']).count().drop(['FECHA DEFUNCION','MUNICIPIO RESIDENCIA','FECHA_INGRESO','INTUBADO','EDAD','DIABETES','EPOC','ASMA','INMUNOSUPRESION','HIPERTENSION','CARDIOVASCULAR','OBESIDAD','RENAL_CRONICA','TABAQUISMO'],axis=1).rename(columns={'ID_REGISTRO':f'{condicion}'}).reset_index()
+    enfermedades_genero = enfermedades_genero.merge(resumen, how='left', on='SEXO')
+enfermedades_genero = enfermedades_genero.rename(columns={'SEXO':'CONDICION'}).transpose().reset_index()
+enfermedades_genero = enfermedades_genero.rename(columns=enfermedades_genero.iloc[0])
+enfermedades_genero = enfermedades_genero.drop([0])
+enfermedades__genero = enfermedades_genero
+
+#COLLECTION
+enfermedades_genero=covid.enfermedades_genero
+enfermedades_genero.drop()
+data_dict = enfermedades__genero.to_dict("records")
+
+for record in data_dict:
+    enfermedades_genero.insert_one(record)
