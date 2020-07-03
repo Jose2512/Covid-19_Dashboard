@@ -52,11 +52,11 @@ def diseases_count():
     return convjson(mongo.db.enfermedades.find())
 
 @app.route("/diseases_gender")
-def diseases_count():
+def diseases_gender():
     return convjson(mongo.db.enfermedades_genero.find())
 
 @app.route("/diseases_age")
-def diseases_count():
+def diseases_age():
     return convjson(mongo.db.enfermedades_edades.find())
 
 def convjson(data):

@@ -1,6 +1,6 @@
 //new
 
-var svgWidth = document.getElementById('mainLinechart').offsetWidth;
+var svgWidth = parseInt(d3.select('#mainLinechart').style('width'), 10);
 var svgHeight = 450;
 
 var margin = {
@@ -191,7 +191,7 @@ var toolTip = d3.select("body")
 }
 
 // Retrieve data from the CSV file and execute everything below
-d3.json("/case_date").then(function(ingData, err) {
+function renderGraph(data,err){
   if (err) throw err;
 
   // Create a function to parse date and time
@@ -207,10 +207,10 @@ d3.json("/case_date").then(function(ingData, err) {
   // xLinearScale function above csv import
  // var xLinearScale = xScale(ingData, chosenXAxis);
 
- console.log("chosenXAxis",chosenXAxis)
+  console.log("chosenXAxis",chosenXAxis)
 
-var xTimeScale = xtScale(ingData, chosenXAxis)
-var xLinearScale = xTimeScale
+  var xTimeScale = xtScale(ingData, chosenXAxis)
+  var xLinearScale = xTimeScale
 
   // Create y scale function
   var yLinearScale = d3.scaleLinear()
@@ -288,8 +288,6 @@ var xLinearScale = xTimeScale
  
   var circlesGroup = updateToolTip(chosenYAxis, circlesGroup);
 
-
- 
   // x axis labels event listener
   labelsGroup.selectAll("text")
     .on("click", function() {
@@ -358,11 +356,10 @@ var xLinearScale = xTimeScale
 
 
       }  //end if
-    });  // listener  labels group  */
-
-
-
+    ;  // listener  labels group  */
 
 }).catch(function(error) {
   console.log(error);
 }); 
+}
+
