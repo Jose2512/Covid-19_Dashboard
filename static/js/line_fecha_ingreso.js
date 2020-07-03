@@ -1,6 +1,6 @@
 //new
 
-function renderGraph(ingData){
+function renderGraph(dataset){
 
   var svgWidth = document.getElementById('mainLinechart').offsetWidth;
   var svgHeight = 450;
@@ -36,16 +36,15 @@ function renderGraph(ingData){
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
   
   // Initial Params
-  var chosenXAxis = "FECHA";
   var chosenYAxis = "CASOS_TOTALES";
   var linegraph   ="no"
   
   // function used for updating x-scale var upon click on axis label
-  function xScale(ingData, chosenXAxis) {
+  function xScale(ingData) {
     // create scales
     var xLinearScale = d3.scaleLinear()
-      .domain([d3.min(ingData, d => d[chosenXAxis]) * 0.8,
-        d3.max(ingData, d => d[chosenXAxis]) * 1.2
+      .domain([d3.min(ingData, d => d.FECHA) * 0.8,
+        d3.max(ingData, d => d.FECHA * 1.2)
       ])
       .range([0, width]);
   
@@ -75,9 +74,9 @@ function renderGraph(ingData){
          d3.max(ingData, d => d[chosenYAxis]) 
        ])
         .range([height, 0]);
-        console.log("d3.min(ingData,",d3.min(ingData, d => d[chosenYAxis]))
-        console.log("d3.min(ingData 2,",d3.max(ingData, d => d[chosenYAxis]))
-        console.log("ysacle",chosenYAxis)
+        // console.log("d3.min(ingData,",d3.min(ingData, d => d[chosenYAxis]))
+        // console.log("d3.min(ingData 2,",d3.max(ingData, d => d[chosenYAxis]))
+        // console.log("ysacle",chosenYAxis)
   
       }
   
@@ -94,10 +93,10 @@ function renderGraph(ingData){
   
    
   
-  function xtScale(ingData, chosenXAxis) {
+  function xtScale(ingData) {
   
    var xTimeScale = d3.scaleTime()
-   .domain(d3.extent(ingData, d => d[chosenXAxis]))
+   .domain(d3.extent(ingData, d => d.FECHA))
    .range([0, width]);
   
    return xTimeScale
@@ -142,19 +141,19 @@ function renderGraph(ingData){
   // new circles
   //circlesGroup = renderCircles(circlesGroup, yLinearScale, chosenYAxis);
   
-  function renderCircles(circlesGroup, newXScale, chosenXAxis,vl_color) {
+  function renderCircles(circlesGroup, newXScale, chosenYAxis ,vl_color) {
   
     if (vl_color == "pink") {
     circlesGroup.transition()
       .duration(1000)
-      .attr("cy", d => newXScale(d[chosenXAxis]))
+      .attr("cy", d => newXScale(d[chosenYAxis]))
       .attr("fill", vl_color)
       //.attr("opacity", ".") 
     } else {
   
       circlesGroup.transition()
       .duration(1000)
-      .attr("cy", d => newXScale(d[chosenXAxis]))
+      .attr("cy", d => newXScale(d[chosenYAxis]))
       .attr("fill", vl_color)
       .attr("opacity", ".6") 
   
@@ -169,7 +168,7 @@ function renderGraph(ingData){
   function updateToolTip(chosenYAxis, circlesGroup) {
   
   
-    console.log ("update tool",chosenYAxis)
+    
     var label;
   
     if (chosenYAxis === "CASOS_MUJERES") {
@@ -184,6 +183,12 @@ function renderGraph(ingData){
   var dateFormatter = d3.timeFormat("%d-%b");
   
   // Step 1: Append tooltip div
+    var toolclear = d3.select("div").select("tooltip")
+
+    if (!toolclear.empty()) {
+      toolclear.remove();
+  }
+
   var toolTip = d3.select("body")
   .append("div")
   .classed("tooltip", true);
@@ -205,7 +210,7 @@ function renderGraph(ingData){
   
        toolTip.transition()
        .duration(100)
-       .style("opacity", 0.9);
+       .style("opacity", 0);
   
       }); // mouseover 
     
@@ -241,7 +246,7 @@ function renderGraph(ingData){
   // .attr("cy", d => newXScale(d[chosenXAxis]))
    {
   
-  console.log("enter motion",chosenYAxis)
+  // console.log("enter motion",chosenYAxis)
    
   // Line generators for each line
       var line1 = d3.line()
@@ -260,7 +265,7 @@ function renderGraph(ingData){
       .attr("stroke-width" , 2)
       .attr("opacity", ".7")
       .attr("stroke-dasharray", ("3, 3"));
-      console.log("line3")
+      // console.log("line3")
   
   var totalLength = lpath.node().getTotalLength();
   
@@ -382,30 +387,29 @@ function renderGraph(ingData){
   
   
   // Retrieve data from the CSV file and execute everything below
-  d3.json("/case_date").then(function(ingData, err) {
-    if (err) throw err;
+
   
     // Create a function to parse date and time
     var parseTime = d3.timeParse("%Y-%m-%d");
     // parse data
-    ingData.forEach(function(data) {
-      data.CASOS_HOMBRES = +data.CASOS_HOMBRES;
-      data.CASOS_MUJERES = +data.CASOS_MUJERES;
-      data.CASOS_TOTALES =+data.CASOS_TOTALES;
-      data.FECHA = parseTime(data.FECHA);
+    // dataset1.forEach(function(data) {
+    //   data.CASOS_HOMBRES = +data.CASOS_HOMBRES;
+    //   data.CASOS_MUJERES = +data.CASOS_MUJERES;
+    //   data.CASOS_TOTALES =+data.CASOS_TOTALES;
+    //   // data.FECHA = parseTime(data.FECHA);
   
-    });
+    // });
   
     // xLinearScale function above csv import
    // var xLinearScale = xScale(ingData, chosenXAxis);
   
   
-  var xTimeScale = xtScale(ingData, chosenXAxis)
+  var xTimeScale = xtScale(dataset1)
   var xLinearScale = xTimeScale
   
     // Create y scale function
     var yLinearScale = d3.scaleLinear()
-      .domain([0, d3.max(ingData, d => d.CASOS_TOTALES)])
+      .domain([0, d3.max(dataset1, d => d.CASOS_TOTALES)])
       .range([height, 0]);
       
   
@@ -427,10 +431,10 @@ function renderGraph(ingData){
   
     // append initial circles
     var circlesGroup = chartGroup.selectAll("circle")
-      .data(ingData)
+      .data(dataset1)
       .enter()
       .append("circle")
-      .attr("cx", d => xLinearScale(d[chosenXAxis]))
+      .attr("cx", d => xLinearScale(d.FECHA))
       .attr("cy", d => yLinearScale(d.CASOS_TOTALES )) //casos totales
       .attr("r", 4)
       .attr("fill", "black")
@@ -458,10 +462,10 @@ function renderGraph(ingData){
         
         var new_value = value
         
-        console.log("old value", old_value)
-        console.log("new value", new_value)
+        // console.log("old value", old_value)
+        // console.log("new value", new_value)
         old_value = new_value
-        console.log("old value===", old_value)
+        // console.log("old value===", old_value)
   
         if (value !== chosenYAxis) {
   
@@ -487,7 +491,7 @@ function renderGraph(ingData){
           // updates x scale for new data
          
   
-          yLinearScale = yScale(ingData, chosenYAxis);
+          yLinearScale = yScale(dataset1, chosenYAxis);
   
   
           // updates x axis with transition
@@ -511,7 +515,7 @@ function renderGraph(ingData){
   
           
           
-          var lpath = line_mot(chartGroup,ingData, xLinearScale,yLinearScale,chosenYAxis)
+          var lpath = line_mot(chartGroup,dataset1, xLinearScale,yLinearScale,chosenYAxis)
       
   
   
@@ -519,26 +523,25 @@ function renderGraph(ingData){
       });  // listener  labels group  */
   
   
+    }
   
-  
-  }).catch(function(error) {
-    console.log(error);
-  }); 
-  
-
-}
+ 
 
 var dataset1= []
 
-function loadData(){
+function loadgraphData(){
   var exampleData = d3.json("/case_date").then(function(data){
-      dataset1=data;
+    var parseTime = d3.timeParse("%Y-%m-%d")
+    dataset1=data;
+    dataset1.forEach(function(data) {
+      data.CASOS_HOMBRES = +data.CASOS_HOMBRES;
+      data.CASOS_MUJERES = +data.CASOS_MUJERES;
+      data.CASOS_TOTALES =+data.CASOS_TOTALES;
+      data.FECHA = parseTime(data.FECHA);
+      });  
+      
       renderGraph(dataset1)
   })
 }
   
-loadData();
-  
-  d3.select(window).on("resize", function() {
-      renderGraph(dataset1)
-})
+loadgraphData();

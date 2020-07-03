@@ -266,24 +266,25 @@ function pyramidBuilder(data, target, options) {
 
 // data must be in a format with age, male, and female in each object
 
-var dataset1 = [];
-var dataset2 = [];
+var datasetgender1 = [];
+var datasetgender2 = [];
 
 function loadData(){
 var exampleData = d3.json("/cases_gender").then(function(data){
-    dataset1=data;
-    pyramidBuilder(dataset1, '#charMW', {height: 400, width: 600})
+    datasetgender1=data;
+    pyramidBuilder(datasetgender1, '#charMW', {height: 400, width: $("#charMW").width()})
 })
 
 var exampleData = d3.json("/deaths_gender").then(function(data){
-    dataset2=data;
-    pyramidBuilder(dataset2, '#charMW_dec', {height: 400, width: 600})
+    datasetgender2=data;
+    pyramidBuilder(datasetgender2, '#charMW_dec', {height: 400, width: $("#charMW").width()})
 })  
 }
 
 loadData();
 
 d3.select(window).on("resize", function() {
-    pyramidBuilder(dataset1, '#charMW', {height: 400, width: 600});
-    pyramidBuilder(dataset2, '#charMW_dec', {height: 400, width: 600})
+    pyramidBuilder(datasetgender1, '#charMW', {height: 400, width: 600});
+    pyramidBuilder(datasetgender2, '#charMW_dec', {height: 400, width: 600});
+    renderGraph()
 })
