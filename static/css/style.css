@@ -141,3 +141,9 @@ body{
 .blue {
     stroke: rgb(14, 7, 80);
 } 
+
+/* LINE CHART */
+path {
+    fill: none;
+    
+    }
