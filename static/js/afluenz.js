@@ -1,11 +1,15 @@
-var svg = d3.select("afluencia"),
-    margin = {top: 20, right: 80, bottom: 30, left: 50},
-    width = svg.attr("width") - margin.left - margin.right,
-    height = svg.attr("height") - margin.top - margin.bottom;
+var margin = {top: 20, right: 80, bottom: 30, left: 50},
+    width = 600 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 
 // Crear SVG
-g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var svg = d3.select("#afluencia")
+  .append("svg");
+
+
+var g = d3.select("#afluencia")
+.select("svg").append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var parseTime = d3.timeParse("%Y%m%d");
 
