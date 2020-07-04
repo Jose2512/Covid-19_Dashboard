@@ -19,7 +19,7 @@ file_to_load = "../../Resources/afluencia-preliminar-en-transporte-publico.csv"
 
 daily_transport_data = pd.read_csv(file_to_load)
 
-clean_covid_data = covid_cases_data[covid_cases_data["positivo"]!="Positivo SARS-CoV-2"]
+clean_covid_data = covid_cases_data[covid_cases_data["positivo"]=="Positivo SARS-CoV-2"]
 clean_covid_data = clean_covid_data[["ID_REGISTRO","SEXO","MUNICIPIO RESIDENCIA","FECHA INGRESO", "FECHA DEFUNCION","INTUBADO","EDAD","DIABETES","EPOC","ASMA","INMUNOSUPRESION","HIPERTENSION","CARDIOVASCULAR","OBESIDAD","RENAL CRONICA","TABAQUISMO"]]
 clean_covid_data = clean_covid_data.fillna("NO")
 
