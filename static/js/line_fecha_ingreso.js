@@ -281,8 +281,9 @@ function renderGraph(dataset){
   
   }
   
+  var vl_measures12 = []
   
-  function labelx_group(chartGroup) {
+  function labelx_group(chartGroup, vl_measures) {
   
     // Create group for two x-axis labels
     var labelsGroup = chartGroup.append("g")
@@ -344,7 +345,7 @@ function renderGraph(dataset){
       .classed("inactive", true)
       .text("Acumulado");
   
-  /*
+ /*
       labelsGroup .append('rect')
    
        .attr("id" ,"r1")
@@ -362,8 +363,8 @@ function renderGraph(dataset){
       //.attr("value", "yes") // value to grab for event listener
       .classed("inactive", true)
       .text("Total Casos");
-  
   */
+
   
   
     // append y axis
@@ -375,15 +376,170 @@ function renderGraph(dataset){
       .classed("axis-text", true)
       .text("Casos por dia");
   
+     var newlabelsGroup = chartGroup.append("g")
+    /*  newlabelsGroup .append('rect')
+      // .attr('class', "line green")
+       .attr("id" ,"r1")
+       .style("fill","blue")
+       .attr("opacity", ".4")
+       .attr('x', 65) //(w / 2) - (margin.middle * 3))
+       .attr('y', 210)
+       .attr('width', 100)
+       .attr('height', 55); */
+
+
+///Measures ====
+
+
+     var rec_td =  newlabelsGroup .append('rect')
   
+       .attr("id" ,"mr1")
+       .style("fill","orange")
+       .attr("opacity", ".4")
+       .attr('x', 3) 
+       .attr('y', 40)
+       .attr('width', 12)
+       .attr('height', 12); 
+
+       var txt_td = newlabelsGroup.append("text")
+       .attr("x", 20)
+       .attr("y", 50)
+       .html(`Total de Dias: ${vl_measures.totdays}`);
+
+       var rec_tc =  newlabelsGroup .append('rect')
+  
+       .attr("id" ,"mr1")
+       .style("fill","black")
+       .attr("opacity", ".6")
+       .attr('x', 20) 
+       .attr('y', 88)
+       .attr('width', 200)
+       .attr('height', 12); 
+
+       var txt_td = newlabelsGroup.append("text")
+       .attr("x", 20)
+       .attr("y", 80)
+       .html(`Total de Casos: ${vl_measures.totc}`);
+
+
+       var lwm =  (vl_measures.perm/100)* 200
+       var rec_rm =  newlabelsGroup .append('rect')
+       .attr("id" ,"mr1")
+       .style("fill","pink")
+       .attr("opacity", ".7")
+       .attr('x', 20) 
+       .attr('y', 104)
+       .attr('width', lwm)
+       .attr('height', 12); 
+
+       var txt_pm = newlabelsGroup.append("text")
+       .attr("x", 135)
+       .attr("y", 114)
+       .html(`%${vl_measures.perm}`);
+
+       var txt_tm = newlabelsGroup.append("text")
+       .attr("x", 180)
+       .attr("y", 113)
+       .html(`C:${vl_measures.totm}`);
+
+       var txt_avgm = newlabelsGroup.append("text")
+       .attr("x", 255)
+       .attr("y", 113)
+       .html(`P:${vl_measures.avgm}`);
+
+
+       var lwh =  (vl_measures.perh/100)* 200
+       var rec_rh =  newlabelsGroup .append('rect')
+       .attr("id" ,"mr1")
+       .style("fill","blue")
+       .attr("opacity", ".7")
+       .attr('x', 20) 
+       .attr('y', 120)
+       .attr('width', lwh)
+       .attr('height', 12); 
+
+       var txt_ph = newlabelsGroup.append("text")
+       .attr("x", 135 )
+       .attr("y", 134)
+       .html(`%${vl_measures.perh}`);
+
+       var txt_th = newlabelsGroup.append("text")
+       .attr("x", 180 )
+       .attr("y", 134)
+       .html(`C:${vl_measures.toth}`);
+
+       var txt_avgh = newlabelsGroup.append("text")
+       .attr("x", 255)
+       .attr("y", 134)
+       .html(`P:${vl_measures.avgh}`);
+
+
+
   
   
   return labelsGroup
   
   } // labelx_group
   
+ var vl_measures1 = []
   
   
+  //get the maruse lines info
+  function measures_info(ingData) {
+
+    var  vl_tot_ch =0
+    var  vl_tot_cm =0
+    var  vl_tot_ct =0
+    var vl_measures =[]
+      for(let i = 0; i < ingData.length; i++)
+      
+      { 
+       
+       console.log("xxxx",vl_tot_ct)
+  
+      vl_tot_ch  += ingData[i].CASOS_HOMBRES
+      vl_tot_cm  += ingData[i].CASOS_MUJERES
+      vl_tot_ct  += ingData[i].CASOS_TOTALES
+  
+    }
+  
+    console.log("Casos H tot", vl_tot_ch); // 6
+    console.log("Casos M tot", vl_tot_cm); // 6
+    console.log("Casos T tot", vl_tot_ct); // 6
+  
+  
+  
+  vl_perh = Math.round((vl_tot_ch/vl_tot_ct) * 100)
+  console.log("Per hombres",vl_perh);
+  vl_perm = Math.round((vl_tot_cm/vl_tot_ct) * 100)
+  console.log("Per Mujeres",vl_perm);
+  vl_tot_days =ingData.length
+  console.log("Tot_days",vl_tot_days);
+  vl_avgh = Math.round ((vl_tot_ch/vl_tot_days) )
+  console.log("Avg h",vl_avgh );
+  vl_avgm =Math.round ( (vl_tot_cm/vl_tot_days) )
+  console.log("Avg h",vl_avgm );
+  
+  vl_measures = {
+  perh : vl_perh,
+  perm : vl_perm ,
+  totdays : vl_tot_days,
+  avgh : vl_avgh,
+  avgm : vl_avgm,
+  totc :vl_tot_ct,
+  toth :vl_tot_ch,
+  totm :vl_tot_cm, 
+  };
+  
+  vl_measures12 = vl_measures
+  return vl_measures
+   
+  } //end measures_info
+    
+  
+
+
+
   
   
   
@@ -404,6 +560,7 @@ function renderGraph(dataset){
     // xLinearScale function above csv import
    // var xLinearScale = xScale(ingData, chosenXAxis);
   
+   vl_measures =  measures_info(dataset1)
   
   var xTimeScale = xtScale(dataset1)
   var xLinearScale = xTimeScale
@@ -442,7 +599,7 @@ function renderGraph(dataset){
       .attr("opacity", ".7");
   
      // create the x labels
-    var labelsGroup = labelx_group(chartGroup)
+    var labelsGroup = labelx_group(chartGroup, vl_measures12)
   
   
   
@@ -529,6 +686,8 @@ function renderGraph(dataset){
  
 
 var dataset1= []
+
+
 
 function loadgraphData(){
   var exampleData = d3.json("/case_date").then(function(data){
