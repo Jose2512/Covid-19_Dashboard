@@ -20,6 +20,7 @@
     <!--BOOTSTRAP AND CSSS-->  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/stylerz.css">
     <link rel="stylesheet" type="text/css" href="./static/navigation/inspector.css">
 
 </head>
@@ -64,8 +65,17 @@
         </div>
         <div class="row">
             <div class="col-12 toppadding">
+            <div class="manualcard"> 
+                <div class="cardtitle">Afluencia y COVID-19</div>
+                <svg width="960" height="500"></svg>
+                <div id="afluencia"></div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 toppadding">
                 <div class="manualcard">
-                    <div class="cardtitle">Historico de casos por delegación</div>
+                    <div class="cardtitle">Titulo
                         <div id="barrace"></div>
                     </div>
                 </div>
@@ -92,6 +102,7 @@
     <script type="text/javascript" src="./static/js/config.js"></script>
     <!-- Our JavaScript -->
     <script type="text/javascript" src="./static/js/heatmap.js"></script>
+    <script type="text/javascript" src="./static/js/afluenz.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

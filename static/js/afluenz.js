@@ -1,4 +1,4 @@
-var svg = d3.select("svg"),
+var svg = d3.select("afluencia"),
     margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = svg.attr("width") - margin.left - margin.right,
     height = svg.attr("height") - margin.top - margin.bottom;
@@ -23,7 +23,7 @@ var line = d3.line()
     .y(function(d) { return y(d.temperature); });
 
 
-d3.tsv("data2.tsv", type, function(error, data) {
+d3.tsv("./static/js/data2.tsv", type, function(error, data) {
   if (error) throw error;
 
 
