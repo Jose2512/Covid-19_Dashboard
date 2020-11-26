@@ -495,7 +495,7 @@ function renderGraph(dataset){
       
       { 
        
-       console.log("xxxx",vl_tot_ct)
+
   
       vl_tot_ch  += ingData[i].CASOS_HOMBRES
       vl_tot_cm  += ingData[i].CASOS_MUJERES
@@ -503,22 +503,22 @@ function renderGraph(dataset){
   
     }
   
-    console.log("Casos H tot", vl_tot_ch); // 6
-    console.log("Casos M tot", vl_tot_cm); // 6
-    console.log("Casos T tot", vl_tot_ct); // 6
+    // console.log("Casos H tot", vl_tot_ch); // 6
+    // console.log("Casos M tot", vl_tot_cm); // 6
+    // console.log("Casos T tot", vl_tot_ct); // 6
   
   
   
   vl_perh = Math.round((vl_tot_ch/vl_tot_ct) * 100)
-  console.log("Per hombres",vl_perh);
+  // console.log("Per hombres",vl_perh);
   vl_perm = Math.round((vl_tot_cm/vl_tot_ct) * 100)
-  console.log("Per Mujeres",vl_perm);
+  // console.log("Per Mujeres",vl_perm);
   vl_tot_days =ingData.length
-  console.log("Tot_days",vl_tot_days);
+  // console.log("Tot_days",vl_tot_days);
   vl_avgh = Math.round ((vl_tot_ch/vl_tot_days) )
-  console.log("Avg h",vl_avgh );
+  // console.log("Avg h",vl_avgh );
   vl_avgm =Math.round ( (vl_tot_cm/vl_tot_days) )
-  console.log("Avg h",vl_avgm );
+  // console.log("Avg h",vl_avgm );
   
   vl_measures = {
   perh : vl_perh,
